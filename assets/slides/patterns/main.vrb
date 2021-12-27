@@ -1,0 +1,11 @@
+\frametitle{Filtering a collection}
+  \begin{lstlisting}[language=Python, autogobble][language=Python, autogobble]
+  def filter(collection):
+    new_list = []
+
+    for thing in collection:
+      if <thing meets criteria>:
+        newlist.append(thing)
+
+    return new_list
+  \end{lstlisting}

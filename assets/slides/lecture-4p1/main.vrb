@@ -1,0 +1,9 @@
+\frametitle{Poll Question: Appending}
+  Given two dictionaries, \lstinline|x| and \lstinline|y|, how do you combine them such that \lstinline|x| contains the result of the operation?
+  \vfill
+  \begin{enumerate}[A]
+    \item \lstinline|x.update(y)|
+    \item \lstinline|x.union(y)|
+    \item \lstinline|x = x + y|
+    \item \lstinline|x = x.update(y)|
+  \end{enumerate}

@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Sets}{5}{0}{1}
+\beamer@sectionintoc {2}{Dictionaries}{15}{0}{2}
+\beamer@sectionintoc {3}{String Formatting}{22}{0}{3}
+\beamer@sectionintoc {4}{Data Types Conclusion}{25}{0}{4}
+\beamer@sectionintoc {5}{Final Reminders}{30}{0}{5}

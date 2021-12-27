@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Reminders}{2}{0}{1}
+\beamer@sectionintoc {2}{Namespaces and Scope Resolution}{4}{0}{2}
+\beamer@sectionintoc {3}{Default Arguments}{16}{0}{3}
+\beamer@sectionintoc {4}{*args}{25}{0}{4}
+\beamer@sectionintoc {5}{**kwargs}{36}{0}{5}

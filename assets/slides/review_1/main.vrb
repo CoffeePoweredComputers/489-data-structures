@@ -1,0 +1,18 @@
+\frametitle{Poll Question: Opening a File}
+  We are script myfile.py and we want to open mydata.csv.
+  \begin{lstlisting}
+  home
+  |__tracertong
+     |---mydata.csv
+     |___dev_website
+         |---index.html
+         |___elements
+             |___ myfile.py   <-- You are here
+  \end{lstlisting}
+  \vfill
+  \begin{enumerate}[A]
+    \item \lstinline|fo = open("../../mydata.csv")|
+    \item \lstinline|fo = open("/../../mydata.csv")|
+    \item \lstinline|fo = open("/tracertong/mydata.csv")|
+    \item \lstinline|fo = open("../../../mydata.csv")|
+  \end{enumerate}

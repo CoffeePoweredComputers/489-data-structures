@@ -1,0 +1,11 @@
+\frametitle{Poll Question: More Math Operators}
+  \vfill
+  Which computes how many (whole) apples I can give to each friend?
+  \begin{enumerate}
+    \item \lstinline{num_friends / num_apples}
+    \item \lstinline{num_apples / num_friends}
+    \item \lstinline{num_friends // num_apples}
+    \item \lstinline{num_apples // num_friends}
+    \item \lstinline{num_friends % num_appples}
+    \item \lstinline{num_apples % num_friends}
+  \end{enumerate}

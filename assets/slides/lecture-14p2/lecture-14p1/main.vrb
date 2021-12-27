@@ -1,0 +1,18 @@
+\frametitle{Subscripting Overloads}
+    To define the behaviour of the \lstinline|[]| operator when using variable unpacking or iteration use the \lstinline|__getitem__(self)| function.
+
+    \begin{lstlisting}[language=Python, autogobble]
+    class Foo:
+        def __init__(self, start, end):
+            self.start = start
+            self.end = end
+
+        def __getitem__(self, item):
+            """Commonly uses a generator"""
+            value = self.start + item
+            if value < self.end:
+                return value
+
+    x = Foo(2,10)
+    print(x[3])
+    \end{lstlisting}

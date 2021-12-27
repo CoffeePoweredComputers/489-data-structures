@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Reminders}{2}{0}{1}
+\beamer@sectionintoc {2}{Files}{4}{0}{2}
+\beamer@sectionintoc {3}{The OS Module}{8}{0}{3}
+\beamer@sectionintoc {4}{Reading Files}{12}{0}{4}
+\beamer@sectionintoc {5}{Write Files}{17}{0}{5}
+\beamer@sectionintoc {6}{Patterns Continued}{21}{0}{6}

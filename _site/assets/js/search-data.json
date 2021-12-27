@@ -1,0 +1,158 @@
+{"0": {
+    "doc": "About",
+    "title": "About the Course",
+    "content": " ",
+    "url": "http://localhost:4000/about/#about-the-course",
+    "relUrl": "/about/#about-the-course"
+  },"1": {
+    "doc": "About",
+    "title": "Table of contents",
+    "content": ". | Course Description | Tools and Resources | Course Elements . | zyBooks and Post-Reading . | Adding the Course in zyBooks | . | Homework | Lecture | Labs | . | Quizzes and the Final Exam | Grading . | Activity Weights | Percent to Letter Grades | . | . ",
+    "url": "http://localhost:4000/about/#table-of-contents",
+    "relUrl": "/about/#table-of-contents"
+  },"2": {
+    "doc": "About",
+    "title": "Course Description",
+    "content": "This course is intended to be a gentle introduction to the world of computer science. You will be covering: . | A general overview of how computer evolved to be what they are today. | The fundamentals of programming in the Python language. | The fundamental of storing and manipulating data in Excel. | How the internet works and how to make a basic website. | . ",
+    "url": "http://localhost:4000/about/#course-description",
+    "relUrl": "/about/#course-description"
+  },"3": {
+    "doc": "About",
+    "title": "Tools and Resources",
+    "content": " ",
+    "url": "http://localhost:4000/about/#tools-and-resources",
+    "relUrl": "/about/#tools-and-resources"
+  },"4": {
+    "doc": "About",
+    "title": "Course Elements",
+    "content": "zyBooks and Post-Reading . The zyBook activities include reading section of the textbook and completing the interactive activities along the way. In zyBooks there are two types of problems: challenge and participation. For this course you only required to complete the participation activities to receive credit. However, it is still strongly recommended that you attempt the challenge problems as they are good preparation for the quizzes and homework. Post-readings activities are on PrairieLearn and are our attempt to solicit information on what aspect of the readings were confusing and which topics were of interest to you. Please respond to these questions thoughtfully and with as much detail as possible as they help us construct the lectures. All due dates for zyBooks and post-reading activities are listed on the course calendar and are due at 11:00 PM CST for each respective due date listed. Adding the Course in zyBooks . | Sign in or create an account at learn.zybooks.com | Enter zyBook code: ILLINOISCS105Summer2021 | Subscribe | . Homework . There is a single homework assigned every week that is due Friday on 11:00 PM CST. Homework activities can be found on the courses’s PrairieLearn. Late work is accepted for partial credit (70%) up to a week after the initial due date. Lecture . Lectures will meet on Zoom twice a week and be accompanied by Discord text chat rooms where you can collaborate with your peers for the included lecture questions. The structure of the lectures will be as follows: announcements/reminders, lecture questions muddiest points and general points from the topic due the previous Sunday, mini-lecture on upcoming topic. The interactive elements of the lecture will consist of questions related to topics that have been recently covered in the course, Zoom polls on the question, followed by a discussion of the correct answer. For each question there will be two polls. The first is intended to be completed individually and the second is intended to be completed with the help of your Discord chat room. Additionally, the first poll is graded for participation and the second is graded for correctness. In aggregate these points will be used to calculate your lecture participation grade. The following is the link to the lecture: https://illinois.zoom.us/j/88475720498?pwd=aFN3cHVCTlZVWnU2N2IxR2xLUUZzZz09 . Labs . Labs will meet using Discord and be focused on giving students practice with the course content and debugging code. They are designed to be completed by a group of students rather than individually so you are encouraged to work with your peers. Though both attendance and completion will contribute to your grade lab completion is largely based on effort put in and ability to demonstrate to a course TA or CA the work that has been done on the lab rather than a set “correctness” standard. Follow these steps to get Discord setup and running on your computers: . | Make an account with your Illinois outlook account: discord.com | Download the desktop applications from the website and login: discord.com/download | Join the lab server via the following invite link that was wsent via email last week or the link on the course announcments page. The link will also be given out during the first lecture when we are going over lab sections. | . When you are in the channel, you will see a message from the Discord bot (Marvin) asking you to “react” to its message with the letter icon. Simply click on the emoji below the corresponds to your lab section. Once you have done this, the Marvin will automatically add a role to your user profile giving you access to your section’s lab channel. This should appear on the left-hand side under the category “Lab Channels” as pictured below. You can always come back to Marvin’s message and select a different lab section by: . | Clicking your previous lab section’s associated emoji to remove your reaction. | Clicking on the icon associated with the lab section you wish to attend. This will remove access to your previous lab section and give you access to the new one you desire to attend. | . ",
+    "url": "http://localhost:4000/about/#course-elements",
+    "relUrl": "/about/#course-elements"
+  },"5": {
+    "doc": "About",
+    "title": "Quizzes and the Final Exam",
+    "content": "All quizzes and the final exam will be given on the PrairieLearn online assessment platform and proctored by the CBTF. More information on this can be found in the . ",
+    "url": "http://localhost:4000/about/#quizzes-and-the-final-exam",
+    "relUrl": "/about/#quizzes-and-the-final-exam"
+  },"6": {
+    "doc": "About",
+    "title": "Grading",
+    "content": "Activity Weights . | Activity | Grade Percentage | . | Textbook Exercises | 5% | . | Post-reading Activities &amp; Homework | 25% | . | Labs | 15% | . | Quizzes | 27% total (1x2% and 5x5%) | . | Final Exam | 25% | . | Lecture Polls | 3% | . Percent to Letter Grades . | Score Percentage | Grade | . | 97 and above | A+ | . | 93 - 96.99 | A | . | 90 - 92.99 | A- | . | 87 - 89.99 | B+ | . | 83 - 86.99 | B | . | 80 - 82.99 | B- | . | 77 - 79.99 | C+ | . | 73 - 76.99 | C | . | 70 - 72.99 | C- | . | 67 - 69.99 | D+ | . | 63 - 66.99 | D | . | 60 - 62.99 | D- | . | 59.99 and below | F | . ",
+    "url": "http://localhost:4000/about/#grading",
+    "relUrl": "/about/#grading"
+  },"7": {
+    "doc": "About",
+    "title": "About",
+    "content": " ",
+    "url": "http://localhost:4000/about/",
+    "relUrl": "/about/"
+  },"8": {
+    "doc": "Announcements",
+    "title": "Announcements",
+    "content": " ",
+    "url": "http://localhost:4000/announcements/",
+    "relUrl": "/announcements/"
+  },"9": {
+    "doc": "Announcements",
+    "title": "Welcome",
+    "content": "0 min read Hello all and welcome! . ",
+    "url": "http://localhost:4000/announcements/",
+    "relUrl": "/announcements/"
+  },"10": {
+    "doc": "Calendar",
+    "title": "Calendar",
+    "content": "▶ Week 1 - Introduction Aug 16 . Aug 17 First Day of Instruction! Lecture 0 Introduction to Computer Science an the History of Computers zyBooks Introduction to Python (Participation &amp; Challenge) Assigned Aug 18 . Aug 19 Lecture 1 Introduction to Python Lab 1 Version Control Setup PrairieLearn Homework 1 Assigned Aug 20 . Aug 21 zyBooks Introduction (Participation) Due PrairieLearn Homework 1 Due Aug 22 zyBooks Introduction (Challenge) Due Week 2 - Variables &amp; Expressions Aug 23 . Aug 24 . Aug 25 . Aug 26 . Aug 27 . Aug 28 . Aug 29 . Week 3 - Introduction to Types Aug 30 . Aug 31 . Sep 01 . Sep 02 . Sep 03 . Sep 04 . Sep 05 . Week 4 - Introduction to Functions Sep 06 Labor Day (No School) Sep 07 . Sep 08 . Sep 09 . Sep 10 . Sep 11 . Sep 12 . Week 5 - Booleans, Conditional Execution, and Branching Sep 13 . Sep 14 . Sep 15 . Sep 16 . Sep 17 . Sep 18 . Sep 19 . Week 6 - Loops Sep 20 . Sep 21 . Sep 22 . Sep 23 . Sep 24 . Sep 25 . Sep 26 . Week 7 - More about Functions Sep 27 . Sep 28 . Sep 29 . Sep 30 . Oct 01 . Oct 02 . Oct 03 . Week 8 - Strings Oct 04 . Oct 05 . Oct 06 . Oct 07 . Oct 08 . Oct 09 . Oct 10 . Week 9 - Files Oct 11 . Oct 12 . Oct 13 PSAT Oct 14 . Oct 15 End of Quarter Oct 16 . Oct 17 . Week 10 - Lists Oct 18 Fall Break Oct 19 Fall Break Oct 20 . Oct 21 . Oct 22 . Oct 23 . Oct 24 . Week 11 - Dictionaries Oct 25 . Oct 26 . Oct 27 . Oct 28 . Oct 29 . Oct 30 . Oct 31 . Week 12 - Troubleshooting Process Nov 01 . Nov 02 . Nov 03 . Nov 04 . Nov 05 Parent/Teacher Conf. (No School) Nov 06 . Nov 07 . Week 13 - Advanced Functions Nov 08 . Nov 09 . Nov 10 . Nov 11 . Nov 12 . Nov 13 . Nov 14 . Week 14 - Classes Nov 15 . Nov 16 . Nov 17 . Nov 18 . Nov 19 . Nov 20 . Nov 21 . Week 15 - Review and Thanksgiving Break 🦃 Nov 22 . Nov 23 . Nov 24 Thanksgiving Break Nov 25 Thanksgiving Break Nov 26 Thanksgiving Break Nov 27 . Nov 28 . Week 16 - Exceptions and Modules Nov 29 . Nov 30 . Dec 01 . Dec 02 . Dec 03 . Dec 04 . Dec 05 . Week 17 - Review Week Dec 06 . Dec 07 . Dec 08 . Dec 09 . Dec 10 . Dec 11 . Dec 12 . Week 18 - Final Exam and Winter Break ❄️ Dec 13 . Dec 14 . Dec 15 . Dec 16 . Dec 17 End of Quarter! Dec 18 . Dec 19 . ",
+    "url": "http://localhost:4000/calendar/",
+    "relUrl": "/calendar/"
+  },"11": {
+    "doc": "CS 105",
+    "title": "Computer Programming",
+    "content": " ",
+    "url": "http://localhost:4000/#computer-programming",
+    "relUrl": "/#computer-programming"
+  },"12": {
+    "doc": "CS 105",
+    "title": "Welcome",
+    "content": "0 min read Hello all and welcome! . Announcements . ",
+    "url": "http://localhost:4000/",
+    "relUrl": "/"
+  },"13": {
+    "doc": "CS 105",
+    "title": "CS 105",
+    "content": " ",
+    "url": "http://localhost:4000/",
+    "relUrl": "/"
+  },"14": {
+    "doc": "Schedule",
+    "title": "Weekly Schedule",
+    "content": ". | 9:00 AM | 9:30 AM | 10:00 AM | 10:30 AM | 11:00 AM | 11:30 AM | 12:00 PM | 12:30 PM | 1:00 PM | 1:30 PM | 2:00 PM | 2:30 PM | 3:00 PM | . | ",
+    "url": "http://localhost:4000/schedule/#weekly-schedule",
+    "relUrl": "/schedule/#weekly-schedule"
+  },"15": {
+    "doc": "Schedule",
+    "title": "Monday",
+    "content": ". | Lecture 11:00 AM–11:45 AM | . | ",
+    "url": "http://localhost:4000/schedule/",
+    "relUrl": "/schedule/"
+  },"16": {
+    "doc": "Schedule",
+    "title": "Tuesday",
+    "content": ". | Lecture 10:05 AM–11:30 AM | . | ",
+    "url": "http://localhost:4000/schedule/",
+    "relUrl": "/schedule/"
+  },"17": {
+    "doc": "Schedule",
+    "title": "Wednesday",
+    "content": ". | Office Hours Section David 12:30 PM–2:00 PM Discord | . | ",
+    "url": "http://localhost:4000/schedule/",
+    "relUrl": "/schedule/"
+  },"18": {
+    "doc": "Schedule",
+    "title": "Thursday",
+    "content": ". | Lecture 10:05 AM–11:30 AM | . | ",
+    "url": "http://localhost:4000/schedule/",
+    "relUrl": "/schedule/"
+  },"19": {
+    "doc": "Schedule",
+    "title": "Friday",
+    "content": ". | Office Hours Section David 7:00 PM–8:00 PM Discord | . | . ",
+    "url": "http://localhost:4000/schedule/",
+    "relUrl": "/schedule/"
+  },"20": {
+    "doc": "Schedule",
+    "title": "Schedule",
+    "content": " ",
+    "url": "http://localhost:4000/schedule/",
+    "relUrl": "/schedule/"
+  },"21": {
+    "doc": "Staff",
+    "title": "Instructor",
+    "content": "David Smith . dhsmith2@illinois.edu . Schedule an appointment . ",
+    "url": "http://localhost:4000/staff/#instructor",
+    "relUrl": "/staff/#instructor"
+  },"22": {
+    "doc": "Staff",
+    "title": "Teaching Assistant",
+    "content": "Charlotte Yoder . ",
+    "url": "http://localhost:4000/staff/#teaching-assistant",
+    "relUrl": "/staff/#teaching-assistant"
+  },"23": {
+    "doc": "Staff",
+    "title": "Staff",
+    "content": " ",
+    "url": "http://localhost:4000/staff/",
+    "relUrl": "/staff/"
+  },"24": {
+    "doc": "Getting Help",
+    "title": "Getting Help",
+    "content": "# Getting Help Please refer to to the material below for how to get help and ask questions **early and often**. The following resources are available to help you with all of your questions: * **Peers:** For all homework and post-reading assignments you are *encouraged* to seek help from your peers. * **Office Hours** - Office hours with the instructor will be hosted on Discord. Please refer to the course schedule [weekly schedule](https://hamiltonfour.tech/uni-high-fall-21/schedule/). * **Calendly** - If you have any questions related to the course or need one-on-one help that cannot be addressed in office hour session you may elect to sign up for a 15 minute meeting with the instructor on Calendly. *This is not office hours and is only intended for help that cannot be addressed in office hours or on CampusWire*. ",
+    "url": "http://localhost:4000/gettinghelp/",
+    "relUrl": "/gettinghelp/"
+  },"25": {
+    "doc": "Quizzes and Final Exam",
+    "title": "Quizzes and Final Exam",
+    "content": "# Quizzes and Final Exam All quizzes will use the College of Engineering's ([Computer-Based Testing Facility CBTF](https://cbtf.engr.illinois.edu/sched/)) with the quizzes being taken on [PrairieLearn](https://prairielearn.engr.illinois.edu/). The following is the set of steps you will follow when signing up and taking a quiz: 1. Navigate the CBTF scheduler to reserve a seat for the quiz. 2. Visit the scheduler before the quiz to view additional 3. Join the proctored session via the Zoom link on the scheduler page. 4. Once you check-in you will be given further instructions via the scheduler page. Quizzes are intended to be completed without any additional aid from your peers, notes, or any additional online resources that are not in the allowed materials list. For these quizzes and exams you are allows the following resources: * A python interpreter. We recommend [Repl.it](repl.it). * Excel, downloadable at [this](https://webstore.illinois.edu/shop/product.aspx?zpid=2816) link. * [Python documentation](https://docs.python.org/3/). It is worth noting that failing to adhere to these academic integrity policies or any of the policies set forth by the CBTF will result in an academic integrity infraction in the course. There will be six quizzes in the course (one per week) followed by the final exam on the 8th and final week of the course. Each quiz, with the exception of the first, is worth 5% of your final grade and the final is worth 25%. ## Exam and Quiz Schedule | Date | Name | Time Allowed | Grade Percentage | --------------------------- | ---------- | ------------ | ---------------- | 6/24 During Your Discussion Time | Quiz 1 | 50 minutes | 2% | 7/01 During Your Discussion Time | Quiz 2 | 50 minutes | 5% | 7/08 During Your Discussion Time | Quiz 3 | 50 minutes | 5% | 7/15 During Your Discussion Time | Quiz 4 | 50 minutes | 5% | 7/22 During Your Discussion Time | Quiz 5 | 50 minutes | 5% | 7/29 During Your Discussion Time | Quiz 6 | 50 minutes | 5% | 8/5 TBD | Final Exam | 2 hours | 25% | ",
+    "url": "http://localhost:4000/quizzes-and-exams/",
+    "relUrl": "/quizzes-and-exams/"
+  }
+}

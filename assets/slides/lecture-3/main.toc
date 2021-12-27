@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Announcements}{2}{0}{1}
+\beamer@sectionintoc {2}{Poll Questions}{3}{0}{2}
+\beamer@sectionintoc {3}{Topic Review: Escape Character}{12}{0}{3}
+\beamer@sectionintoc {4}{Topic Review: More Math Operators}{15}{0}{4}
+\beamer@sectionintoc {5}{Topic Review: Orders of Operation}{17}{0}{5}

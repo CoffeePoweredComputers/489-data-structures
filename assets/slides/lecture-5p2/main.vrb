@@ -1,0 +1,13 @@
+\frametitle{Poll Questions: Conditional Expressions}
+  What is the the resulting value of \lstinline|x|?
+  \begin{lstlisting}[language=Python, autogobble]
+  y = 1.0
+  x = "It's a float!" if type(y) == float
+  \end{lstlisting}
+  \vfill
+  \begin{enumerate}[A]
+    \item SyntaxError
+    \item "It's a float!"
+    \item None
+    \item This code contains another error
+  \end{enumerate}

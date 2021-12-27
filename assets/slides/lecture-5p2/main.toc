@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{\lstinline |is| vs \lstinline |==|}{3}{0}{1}
+\beamer@sectionintoc {2}{Poll Questions: Conditional Syntax Check}{5}{0}{2}
+\beamer@sectionintoc {3}{Poll Questions: Correct Functions}{18}{0}{3}
+\beamer@sectionintoc {4}{Code Blocks}{24}{0}{4}
+\beamer@sectionintoc {5}{Conditional Expressions}{26}{0}{5}

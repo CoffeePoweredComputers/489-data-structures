@@ -1,0 +1,37 @@
+\frametitle{Poll Question: Constructing Conditionals}
+  What function returns a list of keys that are associated with even values? You can assume that the values are of type int.
+	\vfill
+	\begin{minipage}{0.32\textwidth}
+    1)
+		\begin{lstlisting}[language=Python, autogobble,basicstyle=\tiny,numbers=none]
+    def get_even_value_keys(d):
+      l = []
+      for foo in d:
+        if d[foo] % 2 == 0:
+          l.append(foo)
+      return l
+		\end{lstlisting}
+	\end{minipage}
+	\begin{minipage}{0.32\textwidth}
+    2)
+		\begin{lstlisting}[language=Python, autogobble,basicstyle=\tiny,numbers=none]
+    def get_even_value_keys(d):
+      l = []
+      i = 0
+      while i < len(d):
+        if d[i] % 2 == 0:
+          l.append(i)
+      return l
+		\end{lstlisting}
+	\end{minipage}
+	\begin{minipage}{0.32\textwidth}
+    3)
+		\begin{lstlisting}[language=Python, autogobble,basicstyle=\tiny,numbers=none]
+    def get_even_value_keys(d):
+      l = []
+      for foo in d:
+        if foo % 2 == 0:
+          l.append(foo)
+      return l
+		\end{lstlisting}
+	\end{minipage}

@@ -1,0 +1,21 @@
+\small
+  \begin{minipage}[t]{0.39\textwidth}
+      \textbf{Algorithm:} \\
+      \begin{enumerate}
+        \item Look at first item.
+        \item Check if it's the item we're looking for.
+        \item If it's the item we're looking for stop otherwise go to next item.
+        \item Repeat steps 2 \& 3 if there are still items in the list.
+      \end{enumerate}
+  \end{minipage}
+  \begin{minipage}[t]{0.59\textwidth}
+    \textbf{Code:}
+    \begin{lstlisting}[language=Python]
+    def search(list, searchitem):
+      for item in items:
+        if item == searchitem:
+          return True
+      return False
+    \end{lstlisting}
+    \hfill
+  \end{minipage}

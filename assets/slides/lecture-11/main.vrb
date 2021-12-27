@@ -1,0 +1,15 @@
+\frametitle{Dictionary Functions}
+  Functions for iteration:
+  \begin{enumerate}
+    \item \lstinline|dict.items()| \textrightarrow \ Generates tuples of all of the key value pairs in the dictionary.
+    \item \lstinline|dict.keys()| \textrightarrow \ Generates all of the keys in the dictionary.
+    \item \lstinline|dict.values()| \textrightarrow \ Generates all of the values in the dictionary.
+  \end{enumerate}
+  \vfill
+  Functions for modification:
+  \begin{enumerate}
+    \item \lstinline|dict.clear()| \textrightarrow \ Clears all the key value pairs from the dictionary.
+    \item \lstinline|dict.get(key, default)| \textrightarrow \ Tries to lookup the value associated with a key and gives default if key not found.
+    \item \lstinline|dict1.update(dict2)| \textrightarrow \ Merges the key:value pairs from dict1 into dict2.
+    \item \lstinline|dict.pop(key, default)| \textrightarrow \ Removes the key:value pair, returns the value, default if key not found.
+  \end{enumerate}

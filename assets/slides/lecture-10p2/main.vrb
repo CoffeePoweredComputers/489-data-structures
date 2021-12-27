@@ -1,0 +1,12 @@
+\frametitle{Poll Question: List Comprehension}
+  What is the value of \lstinline|y|.
+  \begin{lstlisting}[language=Python, autogobble]
+  y = [c for c in 'alma mater' if c in 'aeiou']
+  \end{lstlisting}
+  \vfill
+  \begin{enumerate}[A]
+    \item \lstinline|'alma mater'|
+    \item \lstinline|['alma mater']|
+    \item \lstinline|'aaae'|
+    \item \lstinline|['a', 'a', 'a', 'e']|
+  \end{enumerate}

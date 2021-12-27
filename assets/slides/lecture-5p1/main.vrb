@@ -1,0 +1,14 @@
+\frametitle{Poll Question: If Statements}
+	What's the result of running the following code?
+	\begin{lstlisting}[language=Python, autogobble]
+	x = 5
+  y = x == 3 or 4
+	\end{lstlisting}
+	\vfill
+	\begin{enumerate}[A]
+		\item True
+		\item False
+		\item SyntaxError
+	\end{enumerate}
+	\pause
+  Will it ever be false?

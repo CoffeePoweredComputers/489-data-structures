@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Reminders}{2}{0}{1}
+\beamer@sectionintoc {2}{More on Functions}{4}{0}{2}
+\beamer@sectionintoc {3}{Scoping}{9}{0}{3}
+\beamer@sectionintoc {4}{Docstrings}{16}{0}{4}
+\beamer@sectionintoc {5}{Generator Functions}{18}{0}{5}
+\beamer@sectionintoc {6}{General Loop Practice}{26}{0}{6}
+\beamer@sectionintoc {7}{Reminders}{31}{0}{7}

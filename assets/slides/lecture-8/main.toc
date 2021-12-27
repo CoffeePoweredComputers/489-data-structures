@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Reminders}{2}{0}{1}
+\beamer@sectionintoc {2}{Strings Slicing}{4}{0}{2}
+\beamer@sectionintoc {3}{Split}{9}{0}{3}
+\beamer@sectionintoc {4}{Join}{12}{0}{4}
+\beamer@sectionintoc {5}{Adv. String Formatting}{18}{0}{5}
+\beamer@sectionintoc {6}{Patterns (Part 1)}{25}{0}{6}

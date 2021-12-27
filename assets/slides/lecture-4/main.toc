@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Announcements}{2}{0}{1}
+\beamer@sectionintoc {2}{Review Poll Questions}{4}{0}{2}
+\beamer@sectionintoc {3}{Math Operators}{6}{0}{3}
+\beamer@sectionintoc {4}{Math Module}{15}{0}{4}
+\beamer@sectionintoc {5}{Lab}{26}{0}{5}
+\beamer@sectionintoc {6}{Lab 1}{27}{0}{6}

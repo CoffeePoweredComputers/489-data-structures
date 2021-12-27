@@ -1,0 +1,2 @@
+\beamer@sectionintoc {1}{Reminders}{2}{0}{1}
+\beamer@sectionintoc {2}{Lists}{4}{0}{2}
