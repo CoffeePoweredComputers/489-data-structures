@@ -1,5 +1,0 @@
-\beamer@sectionintoc {1}{Reminders}{2}{0}{1}
-\beamer@sectionintoc {2}{Lists: General Review}{4}{0}{2}
-\beamer@sectionintoc {3}{List Creation vs Modification}{11}{0}{3}
-\beamer@sectionintoc {4}{Nested Lists}{13}{0}{4}
-\beamer@sectionintoc {5}{numpy}{17}{0}{5}

@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: CI 487 | Data Structures
-logo: 'assets/images/105-logo.svg'
+logo: 'assets/images/487-logo.svg'
 tagline: Data Structures
 author: David H Smith IV 
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md"]

@@ -1,5 +1,0 @@
-\beamer@sectionintoc {1}{Reminders}{2}{0}{1}
-\beamer@sectionintoc {2}{The Birds Eye View}{4}{0}{2}
-\beamer@sectionintoc {3}{Making a Class}{11}{0}{3}
-\beamer@sectionintoc {4}{Attributes and Methods}{28}{0}{4}
-\beamer@sectionintoc {5}{Modifying Attributes after Instantiation}{41}{0}{5}

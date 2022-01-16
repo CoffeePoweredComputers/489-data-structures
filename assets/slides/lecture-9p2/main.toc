@@ -1,6 +1,0 @@
-\beamer@sectionintoc {1}{Reminders}{2}{0}{1}
-\beamer@sectionintoc {2}{OS Review}{4}{0}{2}
-\beamer@sectionintoc {3}{Files Review}{7}{0}{3}
-\beamer@sectionintoc {4}{With-As vs Open-Close}{13}{0}{4}
-\beamer@sectionintoc {5}{File Patterns}{16}{0}{5}
-\beamer@sectionintoc {6}{Argument Vector (argv)}{18}{0}{6}

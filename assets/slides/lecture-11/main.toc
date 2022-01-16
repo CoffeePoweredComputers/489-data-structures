@@ -1,4 +1,0 @@
-\beamer@sectionintoc {1}{Reminders}{2}{0}{1}
-\beamer@sectionintoc {2}{Dictionaries}{4}{0}{2}
-\beamer@sectionintoc {3}{Computing a Histogram}{6}{0}{3}
-\beamer@sectionintoc {4}{Key, Item, Value Functions}{10}{0}{4}

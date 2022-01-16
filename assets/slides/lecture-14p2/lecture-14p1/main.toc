@@ -1,4 +1,0 @@
-\beamer@sectionintoc {1}{Reminders}{2}{0}{1}
-\beamer@sectionintoc {2}{Review + New Stuff: Class Constructors}{4}{0}{2}
-\beamer@sectionintoc {3}{Class Interfaces, Internal Methods, and Encapsulation}{9}{0}{3}
-\beamer@sectionintoc {4}{Overloading}{19}{0}{4}

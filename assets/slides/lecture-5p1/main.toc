@@ -1,6 +1,0 @@
-\beamer@sectionintoc {1}{Truth Tables}{2}{0}{1}
-\beamer@sectionintoc {2}{Boolean Expressions}{6}{0}{2}
-\beamer@sectionintoc {3}{Poll Questions}{9}{0}{3}
-\beamer@sectionintoc {4}{Conditional Branching}{16}{0}{4}
-\beamer@sectionintoc {5}{More Poll Questions}{20}{0}{5}
-\beamer@sectionintoc {6}{Short Circuit}{30}{0}{6}

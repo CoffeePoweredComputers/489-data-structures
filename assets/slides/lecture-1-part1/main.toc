@@ -1,2 +1,0 @@
-\beamer@sectionintoc {1}{Ice Breakers}{2}{0}{1}
-\beamer@sectionintoc {2}{Course Overview}{5}{0}{2}

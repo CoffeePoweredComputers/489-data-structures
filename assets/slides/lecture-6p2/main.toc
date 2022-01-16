@@ -1,3 +1,0 @@
-\beamer@sectionintoc {1}{Enumerate}{2}{0}{1}
-\beamer@sectionintoc {2}{Break vs Continue}{16}{0}{2}
-\beamer@sectionintoc {3}{General Loop Practice}{29}{0}{3}

@@ -1,5 +1,0 @@
-\beamer@sectionintoc {1}{Reminders}{2}{0}{1}
-\beamer@sectionintoc {2}{Basics of Website Construction}{4}{0}{2}
-\beamer@sectionintoc {3}{HTML}{11}{0}{3}
-\beamer@sectionintoc {4}{CSS}{20}{0}{4}
-\beamer@sectionintoc {5}{Next bat time. Same bat channel.}{24}{0}{5}

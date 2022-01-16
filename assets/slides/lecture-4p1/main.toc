@@ -1,5 +1,0 @@
-\beamer@sectionintoc {1}{String Formatting}{2}{0}{1}
-\beamer@sectionintoc {2}{Function Overview}{5}{0}{2}
-\beamer@sectionintoc {3}{Function Polls}{14}{0}{3}
-\beamer@sectionintoc {4}{Review}{23}{0}{4}
-\beamer@sectionintoc {5}{Reminders}{30}{0}{5}

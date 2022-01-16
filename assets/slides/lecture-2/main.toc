@@ -1,4 +1,0 @@
-\beamer@sectionintoc {1}{A Brief Review}{3}{0}{1}
-\beamer@sectionintoc {2}{Poll Questions}{17}{0}{2}
-\beamer@sectionintoc {3}{Errors}{20}{0}{3}
-\beamer@sectionintoc {4}{Data Types and Errors}{27}{0}{4}

@@ -1,6 +1,0 @@
-\beamer@sectionintoc {1}{Reminders}{2}{0}{1}
-\beamer@sectionintoc {2}{User Input}{4}{0}{2}
-\beamer@sectionintoc {3}{Data Types}{8}{0}{3}
-\beamer@sectionintoc {4}{Conditionals}{18}{0}{4}
-\beamer@sectionintoc {5}{Loops}{22}{0}{5}
-\beamer@sectionintoc {6}{OS and Files}{27}{0}{6}

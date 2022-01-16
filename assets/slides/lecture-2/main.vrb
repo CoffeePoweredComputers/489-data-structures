@@ -1,9 +1,0 @@
-\frametitle{Converting from string to integer}
-  \begin{lstlisting}[language=Python]
-  x = input() #type(x) is str
-  x = int(x)  #type of x is int
-  \end{lstlisting}
-  is the same as
-  \begin{lstlisting}[language=Python]
-  x = int(input())
-  \end{lstlisting}

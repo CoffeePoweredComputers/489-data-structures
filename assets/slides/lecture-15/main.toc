@@ -1,6 +1,0 @@
-\beamer@sectionintoc {1}{Topics to Review}{2}{0}{1}
-\beamer@sectionintoc {2}{input and print}{3}{0}{2}
-\beamer@sectionintoc {3}{Data Types and Functions}{9}{0}{3}
-\beamer@sectionintoc {4}{HTML}{16}{0}{4}
-\beamer@sectionintoc {5}{requests}{18}{0}{5}
-\beamer@sectionintoc {6}{General Review}{20}{0}{6}
