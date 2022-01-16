@@ -13,9 +13,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Uni CS
+title: CI 487 | Data Structures
 logo: 'assets/images/105-logo.svg'
-tagline: Computer Programming
+tagline: Data Structures
 author: David H Smith IV 
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
 
