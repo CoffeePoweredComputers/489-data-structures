@@ -10,14 +10,13 @@ n: "{}"
 ---
 
 {}
-: 
+: **Nothing Due**
 
 {}
-: 
-**Lecture**{{: .label .label-light-blue}} X
+: **Lecture**{{: .label .label-light-blue}} X
 
 {}
-: 
+: **Nothing Due**
 
 {}
 : **Lecture**
