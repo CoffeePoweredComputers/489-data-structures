@@ -7,7 +7,7 @@ Nov 21
 : **Nothing Due**
 
 Nov 22
-: **Lecture**{: .label .label-light-blue} X
+: **Nothing Due**
 
 Nov 23
 : **Nothing Due**
@@ -16,7 +16,7 @@ Nov 24
 : **Lecture**
 
 Nov 25
-: **zyBooks**{: .label .label-orange} 
+: **Nothing Due**
 
 Nov 26
 : **Nothing Due**
