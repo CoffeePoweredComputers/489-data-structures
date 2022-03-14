@@ -1,5 +1,5 @@
 ---
-navtitle: Week 14 - Thanksgiving Break! 🦃
+navtitle: 🦃  **Week 14** - Thanksgiving Break!
 n: "o"
 ---
 
@@ -13,7 +13,7 @@ Nov 23
 : **Nothing Due**
 
 Nov 24
-: **Lecture**
+: **Nothing Due**
 
 Nov 25
 : **Nothing Due**

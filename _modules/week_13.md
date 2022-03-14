@@ -1,22 +1,25 @@
 ---
-navtitle: Week 13 -
+navtitle: **Week 13** - Shortest Path Cont'd and Minimum Spanning Tree
 n: "n"
 ---
 
 Nov 14
-: **Nothing Due**
+: **Mini-Assignment**{: .label .label-orange} Implementing a Generic Graph (Final Submission)
 
 Nov 15
 : **Lecture**{: .label .label-light-blue} X
 
 Nov 16
-: **Nothing Due**
+: [Daily Practice - ](https://leetcode.com/problems/)
+    : [Solution Video]()
 
 Nov 17
-: **Lecture**
+: [Daily Practice - ](https://leetcode.com/problems/)
+    : [Solution Video]()
 
 Nov 18
-: **zyBooks**{: .label .label-orange} 
+: [Daily Practice - ](https://leetcode.com/problems/)
+    : [Solution Video]()
 
 Nov 19
 : **Nothing Due**

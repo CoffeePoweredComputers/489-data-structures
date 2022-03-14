@@ -1,23 +1,26 @@
 ---
-navtitle: Week 7 - Adelson-Velsky and Landis (AVL) Trees
+navtitle: **Week 7** - Adelson-Velsky and Landis (AVL) Trees
 n: "h"
 ---
 
 Oct 03
-: **Nothing Due**
+: **Mini-Assignment**{: .label .label-orange} Implementing a Generic Binary Search Tree
 
 Oct 04
-: **Lecture**{: .label .label-light-blue} X
+: **Lecture**{: .label .label-light-blue} Self Balancing BSTs in General and AVl Trees
     : [Slides](), [Video]()
 
 Oct 05
-: **Nothing Due**
+: [Daily Practice - ](https://leetcode.com/problems/)
+    : [Solution Video]()
 
 Oct 06
-: **Lecture**
+: [Daily Practice - ](https://leetcode.com/problems/)
+    : [Solution Video]()
 
 Oct 07
-: **zyBooks**{: .label .label-orange} 
+: [Daily Practice - ](https://leetcode.com/problems/)
+    : [Solution Video]()
 
 Oct 08
 : **Nothing Due**

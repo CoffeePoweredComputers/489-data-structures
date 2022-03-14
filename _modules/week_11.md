@@ -1,5 +1,5 @@
 ---
-navtitle: Week 11 -
+navtitle: **Week 11** - Types of Graphs and their Implementations
 n: "l"
 ---
 
@@ -10,13 +10,16 @@ Nov 01
 : **Lecture**{: .label .label-light-blue} X
 
 Nov 02
-: **Nothing Due**
+: [Daily Practice - ](https://leetcode.com/problems/)
+    : [Solution Video]()
 
 Nov 03
-: **Lecture**
+: [Daily Practice - ](https://leetcode.com/problems/)
+    : [Solution Video]()
 
 Nov 04
-: **zyBooks**{: .label .label-orange} 
+: [Daily Practice - ](https://leetcode.com/problems/)
+    : [Solution Video]()
 
 Nov 05
 : **Nothing Due**

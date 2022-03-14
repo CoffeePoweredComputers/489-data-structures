@@ -1,5 +1,5 @@
 ---
-navtitle: Week 1 - Reviewing and Extending the Fundamentals of Java
+navtitle: **Week 1** - Reviewing and Extending the Fundamentals of Java
 n: "b"
 ---
 

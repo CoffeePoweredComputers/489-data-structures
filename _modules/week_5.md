@@ -1,10 +1,10 @@
 ---
-navtitle: Week 5 - The Stack and Queue Interfaces
+navtitle: **Week 5** - The Stack and Queue Interfaces
 n: "f"
 ---
 
 Sep 19
-: **Nothing Due**
+: **Mini-Assignment**{: .label .label-orange} Implementing a Generic Singly Linked List
 
 Sep 20
 : **Lecture**{: .label .label-light-blue} X

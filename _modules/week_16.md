@@ -1,10 +1,10 @@
 ---
-navtitle: Week 16 - No Finals
+navtitle: **Week 16** - No Finals
 n: "q"
 ---
 
 Dec 05
-: **Nothing Due**
+: **Project**{: .label .label-purp} Project #3 - Campus Navigator
 
 Dec 06
 : **Nothing Due**

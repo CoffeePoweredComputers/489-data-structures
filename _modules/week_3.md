@@ -1,10 +1,10 @@
 ---
-navtitle: Week 3 - Interfaces and Generics
+navtitle: **Week 3** - Interfaces and Generics
 n: "d"
 ---
 
 Sep 05
-: **Nothing Due**
+: **Mini-Assignment**{: .label .label-orange} Vehicle Database
 
 Sep 06
 : **Lecture**{: .label .label-light-blue} X

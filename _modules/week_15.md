@@ -1,26 +1,27 @@
 ---
-navtitle: Week 15 -
+navtitle: **Week 15** - Final Review
 n: "p"
 ---
 
 Nov 28
-: **Nothing Due**
+: **Mini-Assignment**{: .label .label-orange} Implementing Dijkstras and Prim's Algorithms
 
 Nov 29
-: **Lecture**{: .label .label-light-blue} X
+: **Lecture**{: .label .label-light-blue} Graphs, Review, and Final Remarks
 
 Nov 30
 : **Nothing Due**
 
 Dec 01
-: **Lecture**
+: **Nothing Due**
 
 Dec 02
-: **zyBooks**{: .label .label-orange} 
+: **Nothing Due**
 
 Dec 03
 : **Nothing Due**
 
 Dec 04
 : **Nothing Due**
+ 
 

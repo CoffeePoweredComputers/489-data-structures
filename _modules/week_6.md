@@ -1,23 +1,26 @@
 ---
-navtitle: Week 6 - Trees
+navtitle: **Week 6** - Trees
 n: "g"
 ---
 
 Sep 26
-: **Nothing Due**
+: **Mini-Assignment**{: .label .label-orange} Implementing a Generic Singly Linked List
 
 Sep 27
-: **Lecture**{: .label .label-light-blue} X
+: **Lecture**{: .label .label-light-blue} Trees, Binary Trees, Binary Search Trees, and Tree Algorithms
     : [Slides](), [Video]()
 
 Sep 28
-: **Nothing Due**
+: [Daily Practice - ](https://leetcode.com/problems/)
+    : [Solution Video]()
 
 Sep 29
-: **Lecture**
+: [Daily Practice - ](https://leetcode.com/problems/)
+    : [Solution Video]()
 
 Sep 30
-: **zyBooks**{: .label .label-orange} 
+: [Daily Practice - ](https://leetcode.com/problems/)
+    : [Solution Video]()
 
 Oct 01
 : **Nothing Due**

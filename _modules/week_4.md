@@ -1,13 +1,13 @@
 ---
-navtitle: Week 4 - Singly and Doubly Linked Lists
+navtitle: **Week 4** - Linked Lists
 n: "e"
 ---
 
 Sep 12
-: **Nothing Due**
+: **Mini-Assignment**{: .label .label-orange} Create and Implement a Generic List Interface
 
 Sep 13
-: **Lecture**{: .label .label-light-blue} X
+: **Lecture**{: .label .label-light-blue} Linked Lists and their Implementations
     : [Slides](), [Video]()
 
 Sep 14
