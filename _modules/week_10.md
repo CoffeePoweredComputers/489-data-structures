@@ -1,5 +1,5 @@
 ---
-navtitle: **Week 10** - Recap and Intro to Graphs
+navtitle: Week 10 - Recap and Intro to Graphs
 n: "k"
 ---
 

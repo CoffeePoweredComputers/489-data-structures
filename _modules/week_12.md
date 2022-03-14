@@ -1,5 +1,5 @@
 ---
-navtitle: **Week 12** - Depth First Search (DFS), Breadth First Search (BFS), and Shortest Path
+navtitle: Week 12 - Depth First Search (DFS), Breadth First Search (BFS), and Shortest Path
 n: "m"
 ---
 

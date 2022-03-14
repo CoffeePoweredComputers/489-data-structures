@@ -1,5 +1,5 @@
 ---
-navtitle: **Week 7** - Adelson-Velsky and Landis (AVL) Trees
+navtitle: Week 7 - Adelson-Velsky and Landis (AVL) Trees
 n: "h"
 ---
 

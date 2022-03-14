@@ -1,5 +1,5 @@
 ---
-navtitle: **Week 2** - Java Review Cont'd and Intro to XML
+navtitle: Week 2 - Java Review Cont'd and Intro to XML
 n: "c"
 ---
 

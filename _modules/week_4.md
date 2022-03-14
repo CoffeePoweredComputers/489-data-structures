@@ -1,5 +1,5 @@
 ---
-navtitle: **Week 4** - Linked Lists
+navtitle: Week 4 - Linked Lists
 n: "e"
 ---
 

@@ -1,5 +1,5 @@
 ---
-navtitle: **Week 11** - Types of Graphs and their Implementations
+navtitle: Week 11 - Types of Graphs and their Implementations
 n: "l"
 ---
 

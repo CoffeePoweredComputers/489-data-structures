@@ -1,5 +1,5 @@
 ---
-navtitle: **Week 3** - Interfaces and Generics
+navtitle: Week 3 - Interfaces and Generics
 n: "d"
 ---
 

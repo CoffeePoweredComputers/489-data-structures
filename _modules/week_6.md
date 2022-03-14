@@ -1,5 +1,5 @@
 ---
-navtitle: **Week 6** - Trees
+navtitle: Week 6 - Trees
 n: "g"
 ---
 
