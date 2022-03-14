@@ -1,5 +1,5 @@
 ---
-navtitle: Week 9 -
+navtitle: 🌓 Week 9 - Midterm Break and Catchup
 n: "j"
 ---
 
@@ -7,16 +7,16 @@ Oct 17
 : **Nothing Due**
 
 Oct 18
-: **Lecture**{: .label .label-light-blue} X
+: **Nothing Due**
 
 Oct 19
 : **Nothing Due**
 
 Oct 20
-: **Lecture**
+: **Nothing Due**
 
 Oct 21
-: **zyBooks**{: .label .label-orange} 
+: **Nothing Due**
 
 Oct 22
 : **Nothing Due**

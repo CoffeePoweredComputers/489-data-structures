@@ -1,5 +1,5 @@
 ---
-navtitle: Week 3 -
+navtitle: Week 3 - Interfaces and Generics
 n: "d"
 ---
 
@@ -8,15 +8,19 @@ Sep 05
 
 Sep 06
 : **Lecture**{: .label .label-light-blue} X
+    : [Slides](), [Video]()
 
 Sep 07
-: **Nothing Due**
+: [Daily Practice - Two Sum](https://leetcode.com/problems/two-sum)
+    : [Solution Video]()
 
 Sep 08
-: **Lecture**
+: [Daily Practice - Two Sum](https://leetcode.com/problems/two-sum)
+    : [Solution Video]()
 
 Sep 09
-: **zyBooks**{: .label .label-orange} 
+: [Daily Practice - Two Sum](https://leetcode.com/problems/two-sum)
+    : [Solution Video]()
 
 Sep 10
 : **Nothing Due**

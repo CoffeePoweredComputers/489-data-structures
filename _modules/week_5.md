@@ -1,5 +1,5 @@
 ---
-navtitle: Week 5 -
+navtitle: Week 5 - The Stack and Queue Interfaces
 n: "f"
 ---
 
@@ -8,15 +8,19 @@ Sep 19
 
 Sep 20
 : **Lecture**{: .label .label-light-blue} X
+    : [Slides](), [Video]()
 
 Sep 21
-: **Nothing Due**
+: [Daily Practice - Validate Parentheses w/ Stack](https://leetcode.com/problems/valid-parentheses/)
+    : [Solution Video]()
 
 Sep 22
-: **Lecture**
+: [Daily Practice - Implement Stack w/ Queue](https://leetcode.com/problems/implement-stack-using-queues/)
+    : [Solution Video]()
 
 Sep 23
-: **zyBooks**{: .label .label-orange} 
+: [Daily Practice - Implement Queue w/ Stack](https://leetcode.com/problems/implement-stack-using-queues/)
+    : [Solution Video]()
 
 Sep 24
 : **Nothing Due**

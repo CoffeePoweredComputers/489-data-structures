@@ -1,5 +1,5 @@
 ---
-navtitle: Week 4 -
+navtitle: Week 4 - Singly and Doubly Linked Lists
 n: "e"
 ---
 
@@ -8,15 +8,19 @@ Sep 12
 
 Sep 13
 : **Lecture**{: .label .label-light-blue} X
+    : [Slides](), [Video]()
 
 Sep 14
-: **Nothing Due**
+: [Daily Practice - ](https://leetcode.com/problems/)
+    : [Solution Video]()
 
 Sep 15
-: **Lecture**
+: [Daily Practice - ](https://leetcode.com/problems/)
+    : [Solution Video]()
 
 Sep 16
-: **zyBooks**{: .label .label-orange} 
+: [Daily Practice - ](https://leetcode.com/problems/)
+    : [Solution Video]()
 
 Sep 17
 : **Nothing Due**

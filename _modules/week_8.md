@@ -1,5 +1,5 @@
 ---
-navtitle: Week 8 -
+navtitle: Week 8 - Hashtables and the Map and Set Interfaces
 n: "i"
 ---
 
@@ -8,6 +8,7 @@ Oct 10
 
 Oct 11
 : **Lecture**{: .label .label-light-blue} X
+    : [Slides](), [Video]()
 
 Oct 12
 : **Nothing Due**

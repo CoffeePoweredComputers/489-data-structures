@@ -1,5 +1,5 @@
 ---
-navtitle: Week 6 -
+navtitle: Week 6 - Trees
 n: "g"
 ---
 
@@ -8,6 +8,7 @@ Sep 26
 
 Sep 27
 : **Lecture**{: .label .label-light-blue} X
+    : [Slides](), [Video]()
 
 Sep 28
 : **Nothing Due**

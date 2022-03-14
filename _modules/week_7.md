@@ -1,5 +1,5 @@
 ---
-navtitle: Week 7 -
+navtitle: Week 7 - Adelson-Velsky and Landis (AVL) Trees
 n: "h"
 ---
 
@@ -8,6 +8,7 @@ Oct 03
 
 Oct 04
 : **Lecture**{: .label .label-light-blue} X
+    : [Slides](), [Video]()
 
 Oct 05
 : **Nothing Due**

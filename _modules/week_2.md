@@ -1,5 +1,5 @@
 ---
-navtitle: Week 2 -
+navtitle: Week 2 - Java Review Cont'd and Intro to XML
 n: "c"
 ---
 
@@ -8,15 +8,19 @@ Aug 29
 
 Aug 30
 : **Lecture**{: .label .label-light-blue} X
+    : [Slides](), [Video]()
 
 Aug 31
-: **Nothing Due**
+: [Daily Practice - ](https://leetcode.com/problems/)
+    : [Solution Video]()
 
 Sep 01
-: **Lecture**
+: [Daily Practice - ](https://leetcode.com/problems/)
+    : [Solution Video]()
 
 Sep 02
-: **zyBooks**{: .label .label-orange} 
+: [Daily Practice - ](https://leetcode.com/problems/)
+    : [Solution Video]()
 
 Sep 03
 : **Nothing Due**
