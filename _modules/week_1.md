@@ -5,11 +5,11 @@ n: "b"
 
 Aug 22
 : **Watch Course Intro Videos**
-    : [Eclipse Setup](), 
+    : [Course Structure](), [Eclipse Setup](), [Introduction to Jupyter]()
 
 Aug 23
-: **Lecture**{: .label .label-light-blue} Java: Reviewing and Extending Concepts
-    : [Slides](), [Video]()
+: **Lecture**{: .label .label-light-blue} Java - Reviewing and Extending Concepts
+    : [Slides](), [Video](), [Worksheet]()
 
 Aug 24
 : [Daily Practice - Two Sum](https://leetcode.com/problems/two-sum)
