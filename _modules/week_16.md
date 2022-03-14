@@ -1,5 +1,5 @@
 ---
-navtitle: Week 16 -
+navtitle: Week 16 - No Finals
 n: "q"
 ---
 
@@ -7,16 +7,16 @@ Dec 05
 : **Nothing Due**
 
 Dec 06
-: **Lecture**{: .label .label-light-blue} X
+: **Nothing Due**
 
 Dec 07
 : **Nothing Due**
 
 Dec 08
-: **Lecture**
+: **Nothing Due**
 
 Dec 09
-: **zyBooks**{: .label .label-orange} 
+: **Nothing Due**
 
 Dec 10
 : **Nothing Due**

@@ -1,5 +1,5 @@
 ---
-navtitle: Week 14 -
+navtitle: Week 14 - Thanksgiving Break! 🦃
 n: "o"
 ---
 
