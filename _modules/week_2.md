@@ -1,5 +1,5 @@
 ---
-navtitle: Week 2 - Java Review Cont'd and Intro to XML
+navtitle: 🏗️ Week 2 - Object Oriented Programming Cont'd and Intro to XML
 n: "c"
 ---
 
@@ -11,7 +11,7 @@ Aug 30
     : [Slides](), [Video](), [Worksheet]()
 
 Aug 31
-: [Daily Practice - ](https://leetcode.com/problems/)
+: [Daily Practice - ](https://leetcode.com/problems/binary-search/)
     : [Solution Video]()
 
 Sep 01

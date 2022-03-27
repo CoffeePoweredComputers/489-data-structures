@@ -1,5 +1,5 @@
 ---
-navtitle: Week 5 - The Stack and Queue Interfaces
+navtitle: 📚 Week 5 - The Stack and Queue Interfaces
 n: "f"
 ---
 

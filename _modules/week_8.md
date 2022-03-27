@@ -1,5 +1,5 @@
 ---
-navtitle: Week 8 - Hashtables and the Map and Set Interfaces
+navtitle: 📙 Week 8 - Hashtables and the Map and Set Interfaces
 n: "i"
 ---
 

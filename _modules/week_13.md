@@ -1,5 +1,5 @@
 ---
-navtitle: Week 13 - Shortest Path Cont'd and Minimum Spanning Tree
+navtitle: 🗺️ Week 13 - Shortest Path Cont'd and Minimum Spanning Tree
 n: "n"
 ---
 

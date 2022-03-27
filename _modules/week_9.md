@@ -1,5 +1,5 @@
 ---
-navtitle: 🌓 Week 9 - Midterm Break and Catchup
+navtitle: 🌓😴 Week 9 - Midterm Break and Catchup
 n: "j"
 ---
 

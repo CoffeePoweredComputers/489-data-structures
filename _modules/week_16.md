@@ -1,5 +1,5 @@
 ---
-navtitle: Week 16 - No Finals
+navtitle: 🏃Week 16 - No Finals
 n: "q"
 ---
 

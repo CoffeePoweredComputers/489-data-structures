@@ -1,5 +1,5 @@
 ---
-navtitle: Week 15 - Final Review
+navtitle: 🎓 Week 15 - Wrapping Things Up
 n: "p"
 ---
 
