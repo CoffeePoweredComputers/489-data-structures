@@ -4,12 +4,14 @@ n: "e"
 ---
 
 Sep 12
-: **Mini-Assignment #1**{: .label .label-orange} Create and Implement a Generic List Interface
+: **Implementation #2**{: .label .label-orange} Simple Array List
     : **Due**{: .label .label-red}
 
 Sep 13
 : **Lecture**{: .label .label-light-blue} Linked Lists and their Implementations
     : [Slides](), [Video]()
+: **Implementation #3**{: .label .label-orange} Generic Linked List
+    : **Assigned**{: .label .label-green}
 
 Sep 14
 : [Daily Practice - ](https://leetcode.com/problems/)

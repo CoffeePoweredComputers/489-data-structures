@@ -4,10 +4,13 @@ n: "p"
 ---
 
 Nov 28
-: **Mini-Assignment**{: .label .label-orange} Implementing Dijkstras and Prim's Algorithms
+: **Implementation #7**{: .label .label-orange} Dijkstra's and Prim's Algorithms
+    : **Due**{: .label .label-red}
 
 Nov 29
 : **Lecture**{: .label .label-light-blue} Graphs, Review, and Final Remarks
+: **Application #3**{: .label .label-orange} Campus Navigator
+    : **red**{: .label .label-green}
 
 Nov 30
 : **Nothing Due**

@@ -4,11 +4,14 @@ n: "d"
 ---
 
 Sep 05
-: **Mini-Assignment**{: .label .label-orange} Vehicle Database
+: **Implementation #1**{: .label .label-orange} Vehicle Database
+    : **Due**{: .label .label-red}
 
 Sep 06
-: **Lecture**{: .label .label-light-blue} X
+: **Lecture**{: .label .label-light-blue} Interfaces and Generics
     : [Slides](), [Video]()
+: **Implementation #2**{: .label .label-orange} Simple Array List
+    : **Assigned**{: .label .label-green}
 
 Sep 07
 : [Daily Practice - Two Sum](https://leetcode.com/problems/two-sum)

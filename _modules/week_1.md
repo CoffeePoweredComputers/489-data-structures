@@ -7,20 +7,23 @@ Aug 22
 : **Watch Course Intro Videos**
     : [Course Structure](), [Eclipse Setup](), [Introduction to Jupyter]()
 
+: **Review Practice**{: .label .label-orange} Practice Problems 1-3 
+    : **Assigned**{: .label .label-red}
+
 Aug 23
 : **Lecture**{: .label .label-light-blue} Java - Reviewing and Extending Concepts
     : [Slides](), [Video](), [Worksheet]()
 
 Aug 24
-: [Daily Practice - Two Sum](https://leetcode.com/problems/two-sum)
+: [Review Practice #1 - Palindrome](https://leetcode.com/problems/valid-palindrome/)
     : [Solution Video]()
 
 Aug 25
-: [Daily Practice - Palindrome](https://leetcode.com/problems/valid-palindrome/)
+: [Review Practice #2 - Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)
     : [Solution Video]()
 
 Aug 26
-: [Daily Practice - Palindrome Number](https://leetcode.com/problems/palindrome-number/)
+: [Review Practice $3 - Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
     : [Solution Video]()
 
 Aug 27

@@ -4,10 +4,13 @@ n: "n"
 ---
 
 Nov 14
-: **Mini-Assignment**{: .label .label-orange} Implementing a Generic Graph (Final Submission)
+: **Implementation #6**{: .label .label-orange} Implementing a Generic Graph - Final Submission
+    : **Assigned**{: .label .label-green}
 
 Nov 15
-: **Lecture**{: .label .label-light-blue} X
+: **Lecture**{: .label .label-light-blue} Graph Algorithms - Part 2
+: **Implementation #7**{: .label .label-orange} Dijkstra's and Prim's Algorithms
+    : **Assigned**{: .label .label-green}
 
 Nov 16
 : [Daily Practice - ](https://leetcode.com/problems/)

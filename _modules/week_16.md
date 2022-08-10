@@ -4,7 +4,7 @@ n: "q"
 ---
 
 Dec 05
-: **Project**{: .label .label-purp} Project #3 - Campus Navigator
+: **Nothing Due**
 
 Dec 06
 : **Nothing Due**
@@ -22,5 +22,5 @@ Dec 10
 : **Nothing Due**
 
 Dec 11
-: **Nothing Due**
-
+: **Application #3**{: .label .label-orange} Campus Navigator
+    : **Due**{: .label .label-red}

@@ -4,11 +4,14 @@ n: "f"
 ---
 
 Sep 19
-: **Mini-Assignment**{: .label .label-orange} Implementing a Generic Singly Linked List
+: **Implementation #3**{: .label .label-orange} Implementing a Generic Singly Linked List
+    : **Due**{: .label .label-red}
 
 Sep 20
-: **Lecture**{: .label .label-light-blue} X
+: **Lecture**{: .label .label-light-blue} Stacks and Queues
     : [Slides](), [Video]()
+: **Application #1**{: .label .label-orange} Card Game
+    : **Assigned**{: .label .label-green}
 
 Sep 21
 : [Daily Practice - Validate Parentheses w/ Stack](https://leetcode.com/problems/valid-parentheses/)

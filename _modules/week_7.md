@@ -4,11 +4,14 @@ n: "h"
 ---
 
 Oct 03
-: **Mini-Assignment**{: .label .label-orange} Implementing a Generic Binary Search Tree
+: **Implementation #4**{: .label .label-orange} Implementing a Generic Binary Search Tree
+    : **Due**{: .label .label-red}
 
 Oct 04
 : **Lecture**{: .label .label-light-blue} Self Balancing BSTs in General and AVl Trees
     : [Slides](), [Video]()
+: **Implementation #5**{: .label .label-orange} Implementing a Generic AVL Tree
+    : **Assigned**{: .label .label-green}
 
 Oct 05
 : [Daily Practice - ](https://leetcode.com/problems/)
