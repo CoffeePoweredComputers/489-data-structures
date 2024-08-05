@@ -10,7 +10,6 @@ seo:
 
 
 ### JupyterHub Worksheets
----
 I developed a set of interactive Java jupyter notebooks ([Data Structures
 Worksheets](https://github.com/CoffeePoweredComputers/487-data-structures-worksheets))
 for inclass activities.
@@ -18,10 +17,9 @@ for inclass activities.
 [![Data Structures Worksheets](https://github-readme-stats.vercel.app/api/pin/?username=CoffeePoweredComputers&repo=487-data-structures-worksheets)](https://github.com/CoffeePoweredComputers/487-data-structures-worksheets)
 
 ### Assignments, Starter and Solution Files
----
 
 ### Slides
----
+
 | Folder Name | PDF Link | Folder Link |
 |-------------|-----------|-------------|
 | Lecture 1  - Introduction to Objects and Abstract Data Types | [PDF](https://github.com/CoffeePoweredComputers/487-data-structures/blob/master/assets/docs/slides/lecture-1-intro/main.pdf) | [Folder 1](https://github.com/CoffeePoweredComputers/487-data-structures/tree/master/assets/docs/slides/lecture-1-intro) |
