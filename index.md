@@ -35,5 +35,4 @@ for inclass activities.
 | Lecture 9  - Graph Intro | [PDF2](https://github.com/CoffeePoweredComputers/487-data-structures/blob/master/assets/docs/slides/lecture-9-graph-intro/lecture-9-graph-intro.pdf) | [Folder2](https://github.com/CoffeePoweredComputers/487-data-structures/blob/master/assets/docs/slides/lecture-9-graph-intro/) |
 | Lecture 10 - Graphs Cont'd | [PDF2](https://github.com/CoffeePoweredComputers/487-data-structures/blob/master/assets/docs/slides/lecture-10-graphs/lecture-10-graphs-contd.pdf) | [Folder2](https://github.com/CoffeePoweredComputers/487-data-structures/blob/master/assets/docs/slides/lecture-10-graphs/) |
 | Lecture 11 - Graph Algorithms | [PDF2](PDF2 link) | [Folder2](Folder2 link) |
-| ... | ... | ... |
 
