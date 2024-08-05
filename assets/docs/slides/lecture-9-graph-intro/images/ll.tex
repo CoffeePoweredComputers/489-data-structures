@@ -1,0 +1,22 @@
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[list/.style={rectangle split, rectangle split parts=2, draw, rectangle split horizontal}, >=stealth, start chain]
+
+    \node[list,on chain] (A) {12};
+    \node[list,on chain] (B) {99};
+    \node[list,on chain] (D) {37};
+    \node[list,on chain] (E) {44};
+    \node[list,on chain] (F) {26};
+
+    \node[on chain,draw,inner sep=6pt] (N) {};
+    \draw (N.north east) -- (N.south west);
+    \draw (N.north west) -- (N.south east);
+
+    \draw[*->] let \p1 = (A.two), \p2 = (A.center) in (\x1,\y2) -- (B);
+    \draw[*->] let \p1 = (B.two), \p2 = (B.center) in (\x1,\y2) -- (D);
+    \draw[*->] let \p1 = (D.two), \p2 = (D.center) in (\x1,\y2) -- (E);
+    \draw[*->] let \p1 = (E.two), \p2 = (E.center) in (\x1,\y2) -- (F);
+    \draw[*->] let \p1 = (F.two), \p2 = (F.center) in (\x1,\y2) -- (N);
+
+
+\end{tikzpicture}}\\
+

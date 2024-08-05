@@ -1,0 +1,22 @@
+\resizebox{0.80\textwidth}{!}{
+\begin{tikzpicture}[level distance=1.5cm,
+    level 1/.style={sibling distance=3cm},
+    level 2/.style={sibling distance=1.5cm},
+    every node/.style = {minimum width = 1.75em, draw, circle},
+    scale=0.75
+    ]
+    \node {9}
+        child {node[] {1}
+            child {node[] {3} edge from parent[->]}
+            child {edge from parent[draw = none]}
+            edge from parent[->]
+        }
+        child {node[] {8} 
+            child {node[]{7} edge from parent[->]}
+            child {node[]{9} 
+                edge from parent[->]
+            }
+            edge from parent[->]
+        };
+\end{tikzpicture}
+}

@@ -1,0 +1,101 @@
+{\renewcommand{\arraystretch}{1.2}% for the vertical padding}
+\begin{tabular}{| c | l |}
+    \hline
+    Key & Value \\
+    \hline
+    A & \rule[11.2ex]{0pt}{0pt}  \begin{tikzpicture}[list/.style={rectangle split, rectangle split parts=3, draw}, start chain]
+
+            \foreach \x/ \w in {D/5}{
+                \node[list,on chain] (\x) {dest=\x \nodepart{second} weight=\w};
+            }
+
+
+            \node[on chain,draw,inner sep=6pt] (N) {};
+            \draw (N.north east) -- (N.south west);
+            \draw (N.north west) -- (N.south east);
+
+
+            \foreach \s/ \d in {D/N}{
+                \draw[*->] let \p1 = (\s.three), \p2 = (\s.three) in (\x1,\y2) -- (\d);
+            }
+
+    \end{tikzpicture}
+    \\ \hline
+    B & \rule[11.2ex]{0pt}{0pt} \begin{tikzpicture}[list/.style={rectangle split, rectangle split parts=3, draw}, start chain]
+
+            \foreach \x/ \w in {A/7}{
+                \node[list,on chain] (\x) {dest=\x \nodepart{second} weight=\w};
+            }
+
+
+            \node[on chain,draw,inner sep=6pt] (N) {};
+            \draw (N.north east) -- (N.south west);
+            \draw (N.north west) -- (N.south east);
+
+
+            \foreach \s/ \d in {A/N}{
+                \draw[*->] let \p1 = (\s.three), \p2 = (\s.three) in (\x1,\y2) -- (\d);
+            }
+
+    \end{tikzpicture}
+    \\ \hline
+    C & \rule[11.2ex]{0pt}{0pt} \begin{tikzpicture}[list/.style={rectangle split, rectangle split parts=3, draw}, start chain]
+
+            \foreach \x/ \w in {B/8, A/2}{
+                \node[list,on chain] (\x) {dest=\x \nodepart{second} weight=\w};
+            }
+
+
+            \node[on chain,draw,inner sep=6pt] (N) {};
+            \draw (N.north east) -- (N.south west);
+            \draw (N.north west) -- (N.south east);
+
+
+            \foreach \s/ \d in {B/A, A/N}{
+                \draw[*->] let \p1 = (\s.three), \p2 = (\s.three) in (\x1,\y2) -- (\d);
+            }
+    \end{tikzpicture}
+    \\ \hline
+    D & \rule[11.2ex]{0pt}{0pt} \begin{tikzpicture}[list/.style={rectangle split, rectangle split parts=3, draw}, start chain]
+            \foreach \x/ \w in {B/1}{
+                \node[list,on chain] (\x) {dest=\x \nodepart{second} weight=\w};
+            }
+
+
+            \node[on chain,draw,inner sep=6pt] (N) {};
+            \draw (N.north east) -- (N.south west);
+            \draw (N.north west) -- (N.south east);
+
+
+            \foreach \s/ \d in {B/N}{
+                \draw[*->] let \p1 = (\s.three), \p2 = (\s.three) in (\x1,\y2) -- (\d);
+            }
+
+
+    \end{tikzpicture}
+    \\ \hline
+    E & \rule[11.2ex]{0pt}{0pt} \begin{tikzpicture}[list/.style={rectangle split, rectangle split parts=3, draw}, start chain]
+
+            \foreach \x/ \w in {D/15, B/7, C/5}{
+                \node[list,on chain] (\x) {dest=\x \nodepart{second} weight=\w};
+            }
+
+
+            \node[on chain,draw,inner sep=6pt] (N) {};
+            \draw (N.north east) -- (N.south west);
+            \draw (N.north west) -- (N.south east);
+
+
+            \foreach \s/ \d in {D/B, B/C, C/N}{
+                \draw[*->] let \p1 = (\s.three), \p2 = (\s.three) in (\x1,\y2) -- (\d);
+            }
+
+
+
+    \end{tikzpicture}
+    \\ \hline
+
+\end{tabular}
+}
+
+
