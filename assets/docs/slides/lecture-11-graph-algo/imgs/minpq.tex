@@ -1,0 +1,21 @@
+\begin{tikzpicture}[
+    level distance = 1cm,
+    level 1/.style = {sibling distance=1.3cm},
+    level 2/.style = {sibling distance=1.0cm},
+    level 3/.style = {sibling distance=0.8cm},
+    every node/.style = {circle,draw},
+    lbl/.style = {rectangle, draw=none, #1,% position
+    font=\footnotesize}
+    ]
+    %
+    \node (Root) [red] {1}
+        child {node {2}
+        }
+        child { node {4}
+            child { node {3} 
+            }
+            edge from parent node[lbl=left] {}
+        };
+\end{tikzpicture}
+
+
