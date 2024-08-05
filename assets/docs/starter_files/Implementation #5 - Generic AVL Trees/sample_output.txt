@@ -1,0 +1,14 @@
+-----Testing Insertion and Removal-----
+b
+c
+d
+e
+f
+g
+h
+j
+k
+
+-----Testing Search Depth-----
+Number of steps to find 1: 13
+Number of steps to find 10000: 14

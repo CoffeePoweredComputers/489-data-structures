@@ -1,0 +1,21 @@
+-- Add Tests --
+Preorder Traversal:  1  4  3  2  12  55  45  32  89  62  95 
+Postorder Traversal:  2  3  32  45  62  95  89  55  12  4  1 
+Inorder Traversal:  1  2  3  4  12  32  45  55  62  89  95 
+
+-- Search Tests --
+Result of searching for four: 4
+Result of searching for 100: null
+
+-- Minimum Tests --
+Minimum node: 1
+
+-- Remove Tests --
+Preorder Traversal:  1  12  3  2  55  45  32  89  62 
+Postorder Traversal:  2  3  32  45  62  89  55  12  1 
+Inorder Traversal:  1  2  3  12  32  45  55  62  89 
+
+-- Add Tests (Strings) --
+Preorder Traversal:  juliett  golf  bravo  alpha  echo  india  sierra  lima  november  mike  zulu 
+Postorder Traversal:  alpha  echo  bravo  india  golf  mike  november  lima  zulu  sierra  juliett 
+Inorder Traversal:  alpha  bravo  echo  golf  india  juliett  lima  mike  november  sierra  zulu 
