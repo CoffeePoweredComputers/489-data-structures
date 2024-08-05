@@ -1,0 +1,208 @@
+\documentclass[a4paper]{article}
+\setlength{\parindent}{0pt}
+
+%%%%%%%% CREATE DOCUMENT STRUCTURE %%%%%%%%
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{subfig}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{sectsty}
+\usepackage{apacite}
+\usepackage{float}
+\usepackage{algorithm2e}
+\usepackage{titling} 
+\usepackage{blindtext}
+\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{xcolor}
+\definecolor{darkgreen}{rgb}{0.0, 0.4, 0.0}
+
+% ToDo: List
+\usepackage{enumitem,amssymb}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+
+\usepackage{tikz}
+\usepackage{verbatim}
+\usetikzlibrary{arrows,shapes}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes.multipart,chains,arrows}
+
+\usepackage{listings}
+\lstset{language=Java,
+    showspaces=false,
+    showtabs=false,
+    breaklines=true,
+    showstringspaces=false,
+    breakatwhitespace=true,
+    commentstyle=\color{pgreen},
+    keywordstyle=\color{pblue},
+    stringstyle=\color{pred},
+    basicstyle=\ttfamily,
+    colframe=white!75!black,
+    moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+
+
+%%%%%%%% DOCUMENT %%%%%%%%
+\begin{document}
+
+\pgfdeclarelayer{background}
+\pgfsetlayers{background,main}
+
+\tikzstyle{starting vertex}=[circle,fill=orange!30,minimum size=20pt,inner sep=0pt]
+\tikzstyle{vertex}=[circle,fill=black!30,minimum size=20pt,inner sep=0pt]
+\tikzstyle{weight} = [font=\small, black!100]
+\tikzstyle{edge} = [draw,line width=0.9pt,-,black!100]
+
+%%%% Title Page
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 							% horizontal line and its thickness
+\center 
+ 
+% University
+\textsc{\LARGE University of Illinois @ Urbana-Champaign}\\[1cm]
+
+% Document info
+\textsc{\Large CI 487: Data Structures for CS Teachers}\\[0.2cm]
+\textsc{\large }\\[1cm] 										% Course Code
+\HRule \\[0.8cm]
+{ \huge \bfseries Implementation \#6:\\\vspace{0.1cm}Implementing a Generic Graph}\\[0.7cm]								% Assignment
+\HRule \\[0.8cm]
+
+\vfill
+\begin{minipage}{0.49\textwidth}
+    \input{./graphs/udw.tex}
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\textwidth}
+    \input{./graphs/uduw.tex}
+\end{minipage}
+\vfill
+\begin{minipage}{0.49\textwidth}
+    \input{./graphs/duw.tex}
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\textwidth}
+    \input{./graphs/dw.tex}
+\end{minipage}
+\vfill
+
+\vfill 
+\end{titlepage}
+
+%%\begin{abstract}
+%%Your abstract.
+%%\end{abstract}
+
+%%%% SECTIONS
+%% Section 1
+\section{Objectives and Overview}
+
+The objective of this lab will be the following:
+\begin{enumerate}
+    \item Construct a generic graph with an adjacency list.
+    \item The graph constructor and implementation should allow for weighted/unweighted and directed/undirect construction and operations.
+    \item The graph should support Breadth-First Search (BFS) and Depth-First Search(DFS) from a given starting vertex.
+\end{enumerate}
+To construct an generic graph that supports operations for a generic graph represented using an \textit{adjacency list}. 
+
+\section{Checkpoint 1}
+
+\subsection{Adjacencly List  Design Details}
+
+Lets begin this lab with a general description of the algorithms and general
+design of the graph we will be building.
+
+\subsubsection{Adjacency List}
+\input{sections/adjlist.tex}
+
+
+\subsection{Edge}\label{sec:edge}
+\input{sections/edge.tex}
+
+\subsection{ListGraph}
+\input{sections/listgraph.tex}
+
+
+\section{Checkpoint 2}
+
+For the second checkpoint you will be implementing both a breadth first and
+depth first search. In donig so, you will complete the following two methods:
+
+\paragraph{\lstinline|public List<E> bfs(T source) \{ ... \}|}: This function
+should perform the BFS function described in Section~\ref{sec:bfs} begining at the
+\lstinline|source| node passed in as a parameter, collect a list of references
+to each of the objects along the way, and return that list once the algorithm
+has completed.
+
+\paragraph{\lstinline|public List<E> dfs(T vertex) \{ ... \}|}: This method 
+should perform the DFS function described in Section~\ref{sec:dfs} begining at the
+\lstinline|source| node passed in as a parameter, collect a list of references
+to each of the objects along the way, and return that list once the algorithm
+has completed.
+
+
+
+
+\subsubsection{Breadth-First Search}\label{sec:bfs}
+\input{sections/bfs.tex}
+
+\subsubsection{Depth-First Search}\label{sec:dfs}
+\input{sections/dfs.tex}
+
+\newpage
+\section{Checklist}
+\begin{itemize}
+    \item Edge 
+        \begin{todolist}
+            \item The class has a \lstinline|weight| and \lstinline|attribute| 
+            \item The class has two constructors, one for weighted edges and the other for unweighted.
+        \end{todolist}
+    \item ListGraph 
+        \begin{todolist}
+            %\item The \lstinline|directed|, \lstinline|weighted|, and \lstinline|map| attributes are present and declared with the proper modifiers.
+            %\item The constructor has been implemented according to spec.
+            \item The following methods have been implemented:
+            \begin{todolist}
+                \item \lstinline|addVertex|
+                \item \lstinline|removeVertex|
+                \item \lstinline|getVertecies|
+                \item \lstinline|addEdgeUnweighted|
+                \item \lstinline|addEdgeWeighted|
+                \item \lstinline|removeEdge|
+                \item \lstinline|getEdges|
+                \item \lstinline|bfs|
+                \item \lstinline|dfs|
+            \end{todolist}
+        \end{todolist}
+\end{itemize}
+
+
+%\section{Rubric}
+
+
+%%\newpage
+%%\bibliographystyle{apacite}
+%%\bibliography{sample}
+
+\end{document}

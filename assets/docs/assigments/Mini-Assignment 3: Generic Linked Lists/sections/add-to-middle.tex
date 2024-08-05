@@ -1,0 +1,125 @@
+\begin{minipage}{\textwidth}
+    \centering
+    \begin{tikzpicture}[list/.style={rectangle split, rectangle split parts=2, draw, rectangle split horizontal}, >=stealth, start chain]
+
+        \node[list,on chain] (A) {12};
+        \node[list,on chain] (B) {99};
+        \node[list,on chain] (C) {37};
+        \node[list,on chain] (D) {44};
+        \node[list,on chain] (E) {26};
+
+        \node[list, below of=C] (New) {22};
+        \node[draw,inner sep=6pt, right of=New] (N1) {};
+        \draw (N1.north east) -- (N1.south west);
+        \draw (N1.north west) -- (N1.south east);
+        \draw[*->] let \p1 = (New.two), \p2 = (New.center) in (\x1,\y2) -- (N1);
+
+        \node[above of=A] (H) {head};
+        \node[above of=E] (T) {tail};
+
+        \node[above of=C] (Curr) {curr};
+        \node[above of=B] (Prev) {prev};
+
+        \node[on chain,draw,inner sep=6pt] (N) {};
+        \draw (N.north east) -- (N.south west);
+        \draw (N.north west) -- (N.south east);
+
+        \draw[*->] let \p1 = (A.two), \p2 = (A.center) in (\x1,\y2) -- (B);
+        \draw[*->] let \p1 = (B.two), \p2 = (B.center) in (\x1,\y2) -- (C);
+        \draw[*->] let \p1 = (C.two), \p2 = (C.center) in (\x1,\y2) -- (D);
+        \draw[*->] let \p1 = (D.two), \p2 = (D.center) in (\x1,\y2) -- (E);
+        \draw[*->] let \p1 = (E.two), \p2 = (E.center) in (\x1,\y2) -- (N);
+
+        \draw[->] (Curr) -- (C);
+        \draw[->] (Prev) -- (B);
+
+        \draw[->] (H) -- (A);
+        \draw[->] (T) -- (E);
+
+    \end{tikzpicture}\\
+    \textbf{Step 1: Search for and find a reference to the node you want to remove and the node that precedes it.}
+\end{minipage}
+\begin{minipage}{\textwidth}
+    \centering
+    \begin{tikzpicture}[list/.style={rectangle split, rectangle split parts=2, draw, rectangle split horizontal}, >=stealth, start chain]
+
+        \node[list,on chain] (A) {12};
+        \node[list,on chain] (B) {99};
+        \node[list,on chain] (C) {37};
+        \node[list,on chain] (D) {44};
+        \node[list,on chain] (E) {26};
+
+        \node[list, below of=C] (New) {22};
+        \node[draw,inner sep=6pt, right of=New] (N1) {};
+        \draw (N1.north east) -- (N1.south west);
+        \draw (N1.north west) -- (N1.south east);
+        \draw[*->] let \p1 = (New.two), \p2 = (New.center) in (\x1,\y2) -- (N1);
+
+        \node[above of=A] (H) {head};
+        \node[above of=E] (T) {tail};
+
+        \node[above of=C] (Curr) {curr};
+        \node[above of=B] (Prev) {prev};
+
+        \node[on chain,draw,inner sep=6pt] (N) {};
+        \draw (N.north east) -- (N.south west);
+        \draw (N.north west) -- (N.south east);
+
+        \draw[*->] let \p1 = (A.two), \p2 = (A.center) in (\x1,\y2) -- (B);
+        \draw[*->] let \p1 = (B.two), \p2 = (B.center) in (\x1,\y2) -- (New);
+        \draw[*->] let \p1 = (C.two), \p2 = (C.center) in (\x1,\y2) -- (D);
+        \draw[*->] let \p1 = (D.two), \p2 = (D.center) in (\x1,\y2) -- (E);
+        \draw[*->] let \p1 = (E.two), \p2 = (E.center) in (\x1,\y2) -- (N);
+
+        \draw[->] (Curr) -- (C);
+        \draw[->] (Prev) -- (B);
+
+        \draw[->] (H) -- (A);
+        \draw[->] (T) -- (E);
+
+    \end{tikzpicture}\\
+    \textbf{Step 2: Update previous node's next node to be a reference to the new node.}
+\end{minipage}\\
+\vspace{0.25cm}\\
+\begin{minipage}{\textwidth}
+    \centering
+    \begin{tikzpicture}[list/.style={rectangle split, rectangle split parts=2, draw, rectangle split horizontal}, >=stealth, start chain]
+
+        \node[list,on chain] (A) {12};
+        \node[list,on chain] (B) {99};
+        \node[list,on chain] (C) {37};
+        \node[list,on chain] (D) {44};
+        \node[list,on chain] (E) {26};
+
+        \node[list, below of=C] (New) {22};
+
+        \node[above of=A] (H) {head};
+        \node[above of=E] (T) {tail};
+
+        \node[above of=C] (Curr) {curr};
+        \node[above of=B] (Prev) {prev};
+
+        \node[on chain,draw,inner sep=6pt] (N) {};
+        \draw (N.north east) -- (N.south west);
+        \draw (N.north west) -- (N.south east);
+
+        \draw[*->] let \p1 = (A.two), \p2 = (A.center) in (\x1,\y2) -- (B);
+        \draw[*->] let \p1 = (B.two), \p2 = (B.center) in (\x1,\y2) -- (New);
+        \draw[*->] let \p1 = (New.two), \p2 = (New.center) in (\x1,\y2) -- (C);
+        \draw[*->] let \p1 = (C.two), \p2 = (C.center) in (\x1,\y2) -- (D);
+        \draw[*->] let \p1 = (D.two), \p2 = (D.center) in (\x1,\y2) -- (E);
+        \draw[*->] let \p1 = (E.two), \p2 = (E.center) in (\x1,\y2) -- (N);
+
+        \draw[->] (Curr) -- (C);
+        \draw[->] (Prev) -- (B);
+
+        \draw[->] (H) -- (A);
+        \draw[->] (T) -- (E);
+
+
+    \end{tikzpicture}\\
+    \textbf{Step 3: Update the new nodes net node to be a reference to the current node}
+\end{minipage}
+
+
+

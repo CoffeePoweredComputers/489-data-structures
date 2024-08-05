@@ -1,0 +1,102 @@
+\begin{figure}[H]
+    \centering
+
+    \resizebox{175px}{!}{%
+    \begin{tikzpicture}[node distance=2cm, scale=0.75]
+
+    %Beckman Quad
+    \node[main] (beckman) [] {Beckman};
+
+    \node[main] (ece) [below left of=beckman] {ECE};
+    \node[main] (nanotech) [below of=ece] {Nanotech. Lab};
+    \node[main] (kenny) [below of=nanotech] {Kenny Gym};
+
+    \node[main] (csl) [below right of=beckman] {Coord. Sci. Lab};
+    \node[main] (newmark) [below of=csl] {Newmark Lab};
+    \node[main] (dcl) [below of=newmark] {Digital Comp. Lab};
+
+    % Bardeen Quad
+    \node[main] (englibrary) [below of=dcl] {Grainger Eng. Library};
+    \node[main] (cif) [left of=englibrary, node distance=5cm] {Campus Instrct. Facility};
+    \node[main] (talbot) [below of=cif, node distance=1.5cm] {Talbot Lab};
+    \node[main] (everitt) [below of=talbot] {Everitt Lab};
+    \node[main] (mech) [below right of=englibrary] {Mech. Eng. Lab};
+    \node[main] (materials) [below of=mech] {Materials Sci.};
+    \node[main] (collegeeng) [left of=materials, node distance=2.5cm] {Eng. Hall};
+
+    % Main Quad
+    \node[main] (union) [below of=collegeeng, node distance=3cm] {Illini Union};
+    \node[main] (altgeld) [left of=union, node distance=4cm] {Altgeld Hall};
+
+    \node[main] (henry) [below of=altgeld] {Henry Admin Bldg};
+    \node[main] (english) [below of=henry] {English Bldg};
+    \node[main] (lincoln) [below of=english] {Lincoln Hall};
+
+    \node[main] (naturalhist) [right of=union, node distance=3cm] {Natural Hist.};
+    \node[main] (noyes) [below of=naturalhist] {Noyes Lab};
+    \node[main] (davenport) [below of=noyes, node distance=2.5cm] {Davenport Hall};
+    \node[main] (foreign) [below of=davenport, node distance=1.5cm] {Foreign Lang Bldg};
+
+    \node[main] (folinger) [left of=foreign, node distance=3cm, yshift=-1.5cm] {Foellinger Hall};
+
+    % South Quad
+    \node[main] (ugl) [below of=folinger] {Undergraduate Lib.};
+
+    \node[main] (morrows) [right of=ugl, node distance=3.5cm] {Morrows Plots};
+    \node[main] (mumford) [below of=morrows] {Mumford Hall};
+
+    \node[main] (library) [left of=ugl, node distance=3.5cm] {Library};
+    \node[main] (edu) [below of=library, node distance=3.5cm, xshift=-1.5cm] {Education Bldg};
+    \node[main] (thbh) [right of=edu, node distance=3cm] {\parbox{2cm}{\centering Temple Hoyne\\ Buell Hall}};
+    \node[main] (naturalresc) [below of=edu, xshift=1.0cm] {Natural Resources Bldg};
+    \node[main] (stock) [right of=naturalresc, xshift=2.5cm] {Stock Pavilion};
+    \node[main] (ag) [below of=mumford, node distance=3cm] {\parbox{2cm}{\centering Ag Eng. \\ Sci. Bldg}};
+
+    %
+    % Edges 
+    %
+    \draw[-] (beckman) -- (ece);
+    \draw[-] (beckman) -- (csl);
+    \draw[-] (ece) -- (nanotech);
+    \draw[-] (nanotech) -- (kenny);
+    \draw[-] (csl) -- (newmark);
+    \draw[-] (newmark) -- (dcl);
+    \draw[-] (kenny) -- (cif);
+    \draw[-] (englibrary) -- (cif);
+    \draw[-] (dcl) -- (englibrary);
+    \draw[-] (cif) -- (talbot);
+    \draw[-] (talbot) -- (everitt);
+    \draw[-] (everitt) -- (collegeeng);
+    \draw[-] (englibrary) -- (mech);
+    \draw[-] (mech) -- (materials);
+    \draw[-] (materials) -- (collegeeng);
+    \draw[-] (everitt) -- (altgeld);
+    \draw[-] (everitt) -- (union);
+    \draw[-] (materials) -- (union);
+    \draw[-] (materials) -- (naturalhist);
+    \draw[-] (union) -- (altgeld);
+    \draw[-] (union) -- (naturalhist);
+    \draw[-] (altgeld) -- (henry);
+    \draw[-] (henry) -- (english);
+    \draw[-] (english) -- (lincoln);
+    \draw[-] (naturalhist) -- (noyes);
+    \draw[-] (noyes) -- (davenport);
+    \draw[-] (davenport) -- (foreign);
+    \draw[-] (lincoln) -- (folinger);
+    \draw[-] (foreign) -- (folinger);
+    \draw[-] (folinger) -- (ugl);
+    \draw[-] (ugl) -- (library);
+    \draw[-] (ugl) -- (morrows);
+    \draw[-] (library) -- (edu);
+    \draw[-] (library) -- (thbh);
+    \draw[-] (edu) -- (naturalresc);
+    \draw[-] (thbh) -- (naturalresc);
+    \draw[-] (edu) -- (thbh);
+    \draw[-] (naturalresc) -- (stock);
+    \draw[-] (morrows) -- (mumford);
+    \draw[-] (mumford) -- (ag);
+    \draw[-] (ag) -- (stock);
+
+    \end{tikzpicture}}
+%    \caption*{The Three Main Quads of Campus}
+\end{figure}

@@ -1,0 +1,215 @@
+\documentclass[a4paper]{article}
+\setlength{\parindent}{0pt}
+
+%%%%%%%% CREATE DOCUMENT STRUCTURE %%%%%%%%
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{subfig}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{lstautogobble}
+\usepackage{sectsty}
+\usepackage{apacite}
+\usepackage{float}
+\usepackage{titling} 
+\usepackage{blindtext}
+\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage{xcolor}
+\definecolor{darkgreen}{rgb}{0.0, 0.4, 0.0}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\usepackage{listings}
+\lstset{language=Java,
+    showspaces=false,
+    showtabs=false,
+    breaklines=true,
+    showstringspaces=false,
+    breakatwhitespace=true,
+    commentstyle=\color{pgreen},
+    keywordstyle=\color{pblue},
+    stringstyle=\color{pred},
+    basicstyle=\ttfamily,
+    colframe=white!75!black,
+    moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+
+\usepackage[most]{tcolorbox}
+
+\newtcblisting{shell}{colback=black,colupper=white,colframe=white!75!black,
+	listing only,listing options={language=sh}}
+
+% ToDo: List
+\usepackage{enumitem,amssymb}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes.multipart,chains,arrows}
+
+%%%%%%%% DOCUMENT %%%%%%%%
+\begin{document}
+
+%%%% Title Page
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 							% horizontal line and its thickness
+\center 
+ 
+ 
+% University
+\textsc{\LARGE University of Illinois @ Urbana-Champaign}\\[1cm]
+
+% Document info
+\textsc{\Large CI 487: Data Structures for CS Teachers}\\[0.2cm]
+\textsc{\large }\\[1cm] 										% Course Code
+\HRule \\[0.8cm]
+{ \huge \bfseries Implementation \#3:\\\vspace{0.1cm}Implementing a Generic Singly Linked List}\\[0.7cm]								% Assignment
+\HRule \\[0.8cm]
+%\includegraphics[width=0.6\textwidth]{images/singly-linked-list.png}\\[1cm] 	% University logo
+\vfill 
+\end{titlepage}
+
+%%\begin{abstract}
+%%Your abstract.
+%%\end{abstract}
+
+%%%% SECTIONS
+%% Section 1
+\section{Objectives and Overview}
+
+This assignment covers the following
+\begin{itemize}
+    \item Nested vs Inner classes
+    \item Singly linked-list structure and operations
+    \item Another implementation of generic data-structures
+\end{itemize}
+
+\textbf{NOTE:} Complete all methods in the order they are presented. Do NOT
+move onto impelementing another method before completing one and testing it.
+With previous assignment you might have been able to get away with jumping between
+implementing different methods however as we move into the world of lists and trees
+doing this without testing and debugging can lead to compounding errors which are 
+difficulty to debug.
+
+\section{Structures and Specifications}
+
+For this assignment you will only be implementing one \lstinline|.java| file in
+addition to \lstinline|main|. The \lstinline|SinglyLinkedList<E>| class will be
+the class that represents our linked list as a whole and allows for operations
+to be performed on that linked list. The individual elements of our linked-list
+will be represented by the \lstinline|ListNode<E>| class which will be a
+\textit{static inner} class of \lstinline|SinglyLinkedList<E>|.
+
+\subsection{Nested vs Inner Classes (\href{https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html}{docs})}
+\begin{minipage}{0.45\textwidth}
+\begin{lstlisting}[frame=trBL]
+class OuterClass{
+    class InnerClass{
+        //...
+    }
+}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{lstlisting}[frame=trBL]
+class OuterClass{
+    static class NestedClass{
+        //...
+    }
+}
+\end{lstlisting}
+\end{minipage}
+
+In Java there are two ways of embedding classes within other classes:
+\begin{itemize}
+    \item \textbf{Inner Class:} This is a class that been declared within another class without the \lstinline|static| modifier. It has access to all of the methods and attributes \textit{regardless of the access modifier they were declared with.} That is to say, the inner class has access to all of the outer classes private variables and methods. Additionaly, you must first instantiate the outer class before instantiating the inner class.
+    \item \textbf{Nested Class:} A nested class is similar to an inner class but is instead declared \textit{with} a \lstinline|static| modifier. This separates them more from their outer class and does not allow the nested class access to it's outer classes \lstinline|private| variables. Declaring the embedded class as \lstinline|static| also allows it to be instantiated regardless of whether its outer class has been instantiated. 
+\end{itemize}
+In both cases these classes are declared for packaging convinience and the
+embedded classes are small classes that are only of utility to their outer
+class. Our \lstinline|ListNode<E>| class is an example of this since it has no
+real utility outside the contex of it's usage in \lstinline|SinglyLinkedList<E>|. It 
+also doesn't need to access any of it's outer classes variables or methods 
+so it makes sense to declare it as a \textit{nested class} rather than an
+\textit{inner class}. This leaves us with the following class structure
+for our linked-list.\\
+
+\begin{lstlisting}[frame=trBL]
+class SinglyLinkedList<E>{
+    static class ListNode<E>{
+        //...
+    }
+}
+\end{lstlisting}
+
+
+\newpage
+
+\input{./sections/methods.tex}
+
+\newpage
+\section{Hints}
+
+For this assignment you will be creating and throwing exceptions when invalid 
+operations are attempted to be performed. Exceptions, in Java are created via
+two elements:
+\begin{enumerate}
+	\item The method header specifies that it throws an exception, as shown in the following template: \lstinline|public void foo() throws Exception{ /* ... */}|.
+	\item A new exception is created and thrown: \lstinline|throw new Exception()|;
+\end{enumerate}
+In this assignment you are told at a number of points to throw an  IndexOutOfBoundsException. You are given the 
+method headers so all you need to do is use a conditional to determine when the exception should be thrown then
+fill in the code that throws the IndexOutOfBoundsException in the body of that if statement. Example code for 
+this is shown below.
+
+\begin{lstlisting}[frame=trBL]
+public ListNode<E> getNodeAtPosition(int pos) throws IndexOutOfBoundsException{
+	if(pos > size - 1 || pos < 0) {
+		throw new IndexOutOfBoundsException();
+	}
+	
+	return new ListNode<>((E) new Object()); // Remove this line once you begin to implement this method
+}
+\end{lstlisting}
+
+\subsection{Checklist}
+\begin{itemize}
+    \item ListNode: All the stuff here is given to you so check off if you didn't modify it :) 
+    \item SinglyLinkedList 
+        \begin{todolist}
+            \item The following accessors and list modification methods have been implemented:
+            \begin{todolist}
+                \item \lstinline|getNodeAtPosition|
+                \item \lstinline|addToFront|
+                \item \lstinline|removeFromFront|
+                \item \lstinline|addToEnd|
+                \item \lstinline|removeFromEnd|
+                \item \lstinline|addNodeAtPosition|
+                \item \lstinline|removeNodeAtPosition|
+            \end{todolist}
+        \end{todolist}
+\end{itemize}
+
+%%\newpage
+%%\bibliographystyle{apacite}
+%%\bibliography{sample}
+
+\end{document}

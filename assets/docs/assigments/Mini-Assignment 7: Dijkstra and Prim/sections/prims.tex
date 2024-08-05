@@ -1,0 +1,91 @@
+\begin{minipage}{0.54\textwidth}
+\RestyleAlgo{ruled} 
+\begin{algorithm}[H]
+    \caption{Prim's Minimum Spanning Tree}\label{alg:prim}
+    \DontPrintSemicolon
+    \SetKwFunction{FPrims}{Prim}
+    \SetKwProg{Fn}{Function}{}{\KwRet}
+    \Fn{\FPrims{G, Source}}{
+        \For{ u $\in$ G.Vertecies}{
+            u.dist  $\gets \infty$\;
+            u.parent $\gets$ null\;
+        }
+        Source.dist $\gets$ 0\;
+        PQ $\gets \emptyset$ \;
+        PQ.Enqueue(\textit{all vertecies})\;
+        \While{PQ $\neq \emptyset$}{
+            u $\gets$ PQ.RemoveMin()\;
+            \For{edge $\in$ G.Adj[u]}{
+                v $\gets$ eedge.dest\;
+                \eIf{v $\in$ PQ AND edge.weight < v.dist}{
+                    v.parent $\gets$ u\;
+                    v.dist $\gets$ e.weight\;
+                    PQ.Reprioritize(v)\;
+                }
+            }
+        }
+    }
+\end{algorithm}
+\end{minipage}
+\hfill
+% NOTE: Credit for this goes to -> https://texample.net/tikz/examples/prims-algorithm/
+\begin{minipage}{0.45\textwidth}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1.8, auto,swap]
+    % Draw a 7,11 network
+    % First we draw the vertices
+    \foreach \pos/\name in {{(0,1)/a}, {(2,1)/b}, {(4,1)/c},
+                            {(0,0)/d}, {(3,0)/e}, {(2,-1)/f}, {(4,-1)/g}}
+        \node[vertex] (\name) at \pos {$\name$};
+    % Connect vertices with edges and draw weights
+    \foreach \source/ \dest /\weight in {b/a/7, c/b/8,d/a/5,d/b/9,
+                                         e/b/7, e/c/5,e/d/15,
+                                         f/d/6,f/e/8,
+                                         g/e/9,g/f/11}
+        \path[edge] (\source) -- node[weight] {$\weight$} (\dest);
+    % Start animating the vertex and edge selection. 
+    \foreach \vertex / \fr in {d/1,a/2,f/3,b/4,e/5,c/6,g/7}
+        \path<\fr-> node[selected vertex] at (\vertex) {$\vertex$};
+    % For convenience we use a background layer to highlight edges
+    % This way we don't have to worry about the highlighting covering
+    % weight labels. 
+    \begin{pgfonlayer}{background}
+        \pause
+        \foreach \source / \dest in {d/a,d/f,a/b,b/e,e/c,e/g}
+            \path<+->[selected edge] (\source.center) -- (\dest.center);
+        \foreach \source / \dest / \fr in {d/b/4,d/e/5,e/f/5,b/c/6,f/g/7}
+            \path<\fr->[ignored edge] (\source.center) -- (\dest.center);
+    \end{pgfonlayer}
+\end{tikzpicture}
+\caption{Prim's Minimum Spannning Tree (Source = D)}
+\end{figure}
+\end{minipage}
+~\\
+For the method \lstinline|primsMST| you should implement the algorithm
+described by Algorithm~\ref{alg:prim}. Additionally, after running the 
+algorithm your method should print all of the edges that make up the 
+minimum spanning tree. Additionally, the following methods may be useful
+when implementing this algorithm:
+\begin{itemize}
+    \item \lstinline|contains(E e)|: The \lstinline|Queue<E>| interface contains a queue method that can be used to determine if the queue contains an element.
+    \item \lstinline|offer(E e)|: The \lstinline|Queue<E>| interface uses the \lstinline|offer| method to allow for the enqueueing of elements.
+    \item \lstinline|poll(E e)|: The \lstinline|Queue<E>| interface uses the \lstinline|offer| method to allow for the dequeueing of elements.
+    \item \lstinline|keySet()|: The \lstinline|Map<E>| interface has this method which will let you get all the keys from a map. For our adjacency graph, the keys are our set of vertecies. This will be useful for when you initially add all vertecies to the queue.
+\end{itemize}
+
+\textit{Hint:} After running this algorithm, the \lstinline|parents| HashMap
+will contain these edges.
+
+\subsubsection*{Example Output}
+
+\begin{shell}
+Prims Edges (Source=D):
+A, D
+B, A
+C, E
+D, null
+E, B
+F, D
+G, E
+\end{shell}

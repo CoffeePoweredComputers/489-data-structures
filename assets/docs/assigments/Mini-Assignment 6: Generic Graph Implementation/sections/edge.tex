@@ -1,0 +1,39 @@
+Just as with the simpler graphs we covered this semester (e.g., Trees,
+LinkedLists) our graph must have some set of basic units.  For graphs these
+units are the vertecies and the edges. Since we are implementing our graph with
+an adjacency list we will need a method of indicating to which vertices a
+vertex is connected and what the weight of that edge is, if applicable.  As
+such, we will be building an inner class \lstinline|Edge<E>| that stores this
+information on the destination and the weight. The adjacency list that results 
+from this will be a lists of edges that exist with respect to a given vertex. 
+As you will see in the starter files, this class is inner class within the 
+encompassing \lstinline|ListGraph<E>| class since it has little utility
+outside the context of constructing a list graph. In this case \lstinline|E|
+will be the type of our vertecies since we are represnting the graph with
+just an edgelist.
+
+\subsubsection{Attributes}
+
+The following attributes will be used for representing the edges of our class:
+\begin{enumerate}
+    \item \lstinline|final int weight|
+    \item \lstinline|final E dest|  
+\end{enumerate}
+Both of these attributes should be declared as \lstinline|final| since, once
+set, we will not be changing the values associated with an instance of an
+\lstinline|Edge|.
+
+\subsubsection{Constructors}
+
+\paragraph{\lstinline|public Edge(E dest) { ... }|}: This constructor will be
+used for the creation of edges for unweighted graphs; hence, the reason for the
+absence of an integer parameter indicating the weight of the edge. It should
+therefore set the \lstinline|weight| attribute to zero when a new edge is
+instantiated using this constructor. The \lstinline|dest| parameter is generic
+and will contain a reference to the destination object.
+
+\paragraph{\lstinline|public Edge(E dest, int weight) { ... }|} This
+constructor is similar to the former one but adds a primitive integer parameter
+\lstinline|weight|. As such, this constructor will be used for the construction
+of weighted edges and should set the \lstinline|dest| and \lstinline|weight| 
+attributes of the object equal to the parameters passed through the function.

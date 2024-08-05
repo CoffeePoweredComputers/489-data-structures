@@ -1,0 +1,106 @@
+\documentclass[a4paper]{article}
+\setlength{\parindent}{0pt}
+
+%%%%%%%% CREATE DOCUMENT STRUCTURE %%%%%%%%
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{subfig}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, intersections}
+
+\tikzstyle{smallbuilding} = [rectangle, rounded corners, minimum width=4cm, minimum height=1.5cm,text centered, draw=black, fill=red!30]
+%\tikzstyle{code} = [trapezium, trapezium left angle=70, trapezium right angle=110 , minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{mediumbuilding} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{largebuilding} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+
+
+%% Useful packages
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{lstautogobble}
+\usepackage{sectsty}
+\usepackage{apacite}
+\usepackage{float}
+\usepackage{titling} 
+\usepackage{blindtext}
+\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage{xcolor}
+\definecolor{darkgreen}{rgb}{0.0, 0.4, 0.0}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\usepackage{listings}
+%\lstset{language=Java,
+%    showspaces=false,
+%    showtabs=false,
+%    breaklines=true,
+%    showstringspaces=false,
+%    breakatwhitespace=true,
+%    commentstyle=\color{pgreen},
+%    keywordstyle=\color{pblue},
+%    stringstyle=\color{pred},
+%    basicstyle=\ttfamily,
+%    colframe=white!75!black,
+%    moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+%}
+
+\usepackage[most]{tcolorbox}
+
+\newtcblisting{shell}{colback=black,colupper=white,colframe=white!75!black,
+	listing only,listing options={language=sh}}
+
+% ToDo: List
+\usepackage{enumitem,amssymb}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+
+%%%%%%%% DOCUMENT %%%%%%%%
+\begin{document}
+
+%%%% Title Page
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 							% horizontal line and its thickness
+\center 
+ 
+% University
+\textsc{\LARGE University of Illinois @ Urbana-Champaign}\\[1cm]
+
+% Document info
+\textsc{\Large CI 489: Data Structures for Education}\\[0.2cm]
+\textsc{\large }\\[1cm] 										% Course Code
+\HRule \\[0.8cm]
+{ \huge \bfseries Project 3: Campus Navigator}\\[0.7cm]								% Assignment
+\HRule \\[0.8cm]
+\vfill
+%\includegraphics[width=0.6\textwidth]{images/xml.jpg}\\[1cm] 	% University logo
+\vfill 
+\end{titlepage}
+
+
+\section*{Objectives and Overview}
+
+\input{./images/graph.tex}
+
+\section*{Structures and Specifications}
+
+\section*{Rubric}
+
+\section*{Instructor Notes}
+
+\end{document}

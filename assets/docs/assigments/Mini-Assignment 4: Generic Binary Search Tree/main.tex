@@ -1,0 +1,237 @@
+\documentclass[a4paper]{article}
+\setlength{\parindent}{0pt}
+
+%%%%%%%% CREATE DOCUMENT STRUCTURE %%%%%%%%
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{subfig}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{framed}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{lstautogobble}
+\usepackage{sectsty}
+\usepackage{apacite}
+\usepackage{float}
+\usepackage{titling} 
+\usepackage{algorithm2e}
+\usepackage{blindtext} \usepackage[square,sort,comma,numbers]{natbib}
+\usepackage{xcolor}
+\definecolor{darkgreen}{rgb}{0.0, 0.4, 0.0}
+
+\usetikzlibrary{arrows, shapes.geometric, intersections}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+\usepackage{listings}
+\lstset{language=Java,
+    showspaces=false,
+    showtabs=false,
+    breaklines=true,
+    showstringspaces=false,
+    breakatwhitespace=true,
+    commentstyle=\color{pgreen},
+    keywordstyle=\color{pblue},
+    stringstyle=\color{pred},
+    basicstyle=\ttfamily,
+    colframe=white!75!black,
+    moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+
+\usepackage[most]{tcolorbox}
+
+\newtcblisting{shell}{colback=black,colupper=white,colframe=white!75!black,
+	listing only,listing options={language=sh}}
+
+% ToDo: List
+\usepackage{enumitem,amssymb}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+
+
+%%%%%%%% DOCUMENT %%%%%%%%
+\begin{document}
+
+%%%% Title Page
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 							% horizontal line and its thickness
+\center 
+ 
+% University
+\textsc{\LARGE University of Illinois @ Urbana-Champaign}\\[1cm]
+
+% Document info
+\textsc{\Large CI 487: Data Structures for CS Teachers}\\[0.2cm]
+\textsc{\large }\\[1cm] 										% Course Code
+\HRule \\[0.8cm]
+{ \huge \bfseries Implementation \#4:\\\vspace{0.1cm}Implementing a Generic Binary Search Tree}\\[0.7cm]								% Assignment
+\HRule \\[0.8cm]
+%\includegraphics[width=0.6\textwidth]{images/singly-linked-list.png}\\[1cm] 	% University logo
+\vfill 
+\end{titlepage}
+
+%%%% SECTIONS
+%% Section 1
+\section{Objectives and Overview}
+
+The objectives of this lab are as follows:
+\begin{itemize}
+    \item Implement a generic Binary Search Tree class
+    \item Gain familiarity with the recursive  methods of creating, accessing, and modifying a binary search tree.
+\end{itemize}
+This document is organized into two sections. Section~\ref{sec:treenode}
+describes the implementation of the individual elements that will make up our
+tree, the \lstinline|TreeNode<E>| class. This class will be similar in spirit
+to the \lstinline|ListNode<E>| class we implemented when constructing a linked list.
+Next, Section~\ref{sec:bst} will describe the implementation of the \lstinline|BinarySearchTree<E>|
+class which is responsible for defining the construction of an access to a Binary
+Search Tree. You are provided the \lstinline|BinarySearchTree.java| file which contains 
+the wrappers and their respective methods stubs.
+
+
+\section{Step 0: Understanding what you're given} 
+\subsection{TreeNode Class }\label{sec:treenode}
+
+The \lstinline|TreeNode<E>| class should be declared as an \textit{inner class}
+with respect to the \lstinline|BinarySearchTree<E>| class. This design choice is made for
+the same reasons as when we declared \lstinline|ListNode<E>| class as an inner
+class in the linked list assignment. Review that assignment document 
+regarding this topic for further information.
+
+\subsubsection{Attributes}
+The list node has three attributes:
+\begin{enumerate}
+    \item A generic variable for holding that node's data.
+    \item A reference to a \lstinline|TreeNode<E>| on the left.
+    \item A reference to a \lstinline|TreeNode<E>| on the right.
+\end{enumerate}
+It is acceptable to leave each of variables at the default level of access.
+
+\subsubsection{Constructor}
+This class has only a single constructor that initializes the data associated
+with the node to the data passed in via the constructors parameter. Additionally,
+it sets the \lstinline|left| and \lstinline|right| attributes to null.
+
+\subsection{BinarySearchTree Class - Structure and Specs}\label{sec:bst}
+
+Since the \lstinline|TreeNode<E>| is declared as an inner class to the
+\lstinline|BinarySearchTree<E>| class this assignment will only involve one
+class file.
+
+\subsubsection{Attributes}
+This class should have two attributes:
+\begin{enumerate}
+    \item \lstinline|private TreeNode<E> root|: This variable contains the root of the whole tree. Much like the \lstinline|head| attributes allowed access to the front of the linked list, the \lstinline|root| allows us access to the top of the tree. It is from this point that we will start all of our traversals.
+    \item \lstinline|private int size|: An integer containing the current number of nodes in the tree. \textbf{This attribute should be incremented and decremented every time a node is added to removed, respectively.}
+\end{enumerate}
+In keeping with the design principle of encapsulation be sure to declare
+these variables with the access level of \lstinline|private|. We never want 
+the user of this class to have to directly intercut with either the root or
+the size. Rather, we will define methods that allow this to be abstracted away.
+
+\subsection{Constructors}
+This class has a single constructor of the following form: \lstinline|public BinarySearchTree(){ ... }|: This is the basic constructor which initializes the
+\lstinline|root| of the tree to \lstinline|null| and \lstinline|size| to 0.
+
+
+We will begin with Section~\ref{sec:adding} which will detail how to add a node
+to a BST. This should be implemented first since we will need to add some nodes
+to the BST in order to perform all other methods. Then Section~\ref{sec:ordertraverse}
+should be implemented as this provides a method of printing the contents of the tree.
+Section~\ref{sec:search} should then be implemented as the \lstinline|findMin| method 
+detailed in that section is crucial to implementing the final method you will
+implement in Section~\ref{sec:remove}, the remove method. Lastly, you will end
+by adding a getter method for the size attribute.
+
+
+\section{Step 1: Adding and Traversing}
+
+We will begin the BST by implementing the methods for adding and traversing the
+tree. The purpose of this is we will need to both add nodes to the tree and
+have method of outputting the contents of tree to test future use of the
+removal method.
+
+\subsection{Adding a Node}\label{sec:adding}
+\input{./sections/adding.tex}
+
+\subsection{Order Traversals}\label{sec:ordertraverse}
+\input{./sections/traversals.tex}
+\newpage
+
+\section{Step 2: Implementing Search}
+\subsection{Search}\label{sec:search}
+\input{./sections/search.tex}
+
+\newpage
+\section{Step 3: Implementing Remove}
+\subsection{Removing a Node}\label{sec:remove}
+\input{./sections/removal.tex}
+\newpage
+
+\paragraph{Removing a Leaf}\hfill\\
+
+\input{./sections/remove-leaf.tex}
+
+\paragraph{Removing a Node with One Subtree}\hfill\\
+
+\input{./sections/remove-one-child.tex}
+
+\newpage
+\paragraph{Removing a Node with Two Subtrees}\hfill\\
+
+\input{./sections/remove-two-children.tex}
+
+
+\section{Final Step: Getting the size}
+\textbf{Your Task:} This class only has one attribute we are interested in and
+that is the variable containing the number of nodes in the tree. Create a
+getter using the appropriate format that returns that value.
+
+
+\section{Checklist}
+
+\begin{itemize}
+    \item The following accessors and tree modification methods have been implemented:
+    \begin{itemize}
+        \item[$\square] \lstinline|add| (Section~\ref{sec:adding})
+        \item Order traversals implemented iteratively(Section~\ref{sec:ordertraverse})
+        \begin{todolist}
+            \item \lstinline|traverseInorder|
+            \item \lstinline|traversePostorder|
+            \item \lstinline|traversePreorder|
+        \end{todolist}
+        \item Search (Section~\ref{sec:search})
+        \begin{todolist}
+            \item \lstinline|search|
+            \item \lstinline|findMinNode|
+        \end{todolist}
+        \item[$\square] \lstinline|remove| (Section~\ref{sec:remove})
+        \item[$\square$] A getter method for the attribute containing the number of nodes in the tree.
+    \end{itemize}
+\end{itemize}
+
+
+%%\newpage
+%%\bibliographystyle{apacite}
+%%\bibliography{sample}
+
+\end{document}

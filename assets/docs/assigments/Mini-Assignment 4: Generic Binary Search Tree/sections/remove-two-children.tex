@@ -1,0 +1,91 @@
+\vspace{0.25cm}\\
+\begin{minipage}{0.32\textwidth}
+    \centering
+    \vspace{0.1cm}
+    \begin{figure}[H]
+    \begin{tikzpicture}[level distance=1.5cm,
+        level 1/.style={sibling distance=3cm},
+        level 2/.style={sibling distance=1.5cm},
+        level 3/.style={sibling distance=.75cm},
+        every node/.style = {minimum width = 2em, draw, circle}
+        ]
+        \node {5}
+            child {node {3}}
+            child {node[fill=!10!orange] (R) {10}
+                child {node (C) {8}
+                    child {node {7}}
+                    child {node {9}}
+                }
+                child {node (C) {12}
+                    child {node {11}}
+                    child {node {13}}
+                }
+            };
+    \end{tikzpicture}
+    \caption{Find the node you want to remove (orange)}
+    \label{fig:twosubtrees-0}
+    \end{figure}
+\end{minipage}
+\hfill
+\begin{minipage}{0.32\textwidth}
+    \centering
+    \begin{figure}[H]
+    \begin{tikzpicture}[level distance=1.5cm,
+        level 1/.style={sibling distance=3cm},
+        level 2/.style={sibling distance=1.5cm},
+        level 3/.style={sibling distance=.75cm},
+        every node/.style = {minimum width = 2em, draw, circle}]
+        \node (P) {5}
+            child {node {3}}
+            child {node[fill=!10!orange] (R) {11}
+                child {node {8}
+                    child {node {7}}
+                    child {node {9}}
+                }
+                child {node {12}
+                    child {node[fill=red!70] (S) {11}}
+                    child {node {13}}
+                }
+            };
+        \draw[->, red, thick] (S) -- (R);
+    \end{tikzpicture}
+    \caption{Find the successor node (red) and copy the successor's value to the node we want to remove.}
+    \label{fig:twosubtrees-1}
+    \end{figure}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+    \centering
+    \begin{figure}[H]
+    \begin{tikzpicture}[level distance=1.5cm,
+        level 1/.style={sibling distance=3cm},
+        level 2/.style={sibling distance=1.5cm},
+        level 3/.style={sibling distance=.75cm},
+        every node/.style = {minimum width = 2em, draw, circle}]
+        \node (P) {5}
+            child {node {3}}
+            child {node[fill=!10!orange] (R) {11}
+                child {node {8}
+                    child {node {7}}
+                    child {node {9}}
+                }
+                child {node {12}
+                    child {edge from parent[draw=none]}
+                    child {node {13}}
+                }
+            };
+    \end{tikzpicture}
+    \caption{Call the removal method on the successor node.}
+    \label{fig:twosubtrees-2}
+    \end{figure}
+\end{minipage}
+\vspace{0.25cm}\\
+
+The process of removing a node that has two subtrees begins with finding the
+node we want to remove (Figure~\ref{fig:twosubtrees-0}). We then have to find
+the minimum node in the node we want to remove's right subtree; otherwise known
+as the node we want to remove's ``inorder successor''. At this point the most
+straightforward option to ``remove'' the orange node is to copy the data from
+the inorder successor node (Figure~\ref{fig:twosubtrees-2}). Finally, we make
+a recursive call to the \lstinline|remove| method to remove the successor
+node.

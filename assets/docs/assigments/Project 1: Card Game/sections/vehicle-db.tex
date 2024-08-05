@@ -1,0 +1,92 @@
+he XML document we are given contains many many fields with various
+information on each type of vehicle. We want our parse to do the following:
+\begin{enumerate}
+  \item Parse the data in using the XML java DOM parser.
+  \item Filter out the data we are interested in and retrieve the values.
+  \item Instantiate Vehicle objects with those values.
+\end{enumerate}
+
+
+\subsubsection{Attributes}
+
+For our class we will need two \lstinline|private| attributes:
+\begin{enumerate}
+    \item \lstinline|vehicleDatabase|  \textrightarrow \  An \lstinline|ArrayList| of \lstinline|Vehicle| instances. This will contain all of the vehicles in our database.
+    \item \lstinline|makes| \textrightarrow \ An \lstinline|ArrayList| of strings. This will contain a list of all the unique makes in our database.
+    \item \lstinline|models| \textrightarrow \ An \lstinline|ArrayList| of string. This will contain a list of all the unique models in our database.
+\end{enumerate}
+
+\textbf{Your Task: } Create these attributes according to their
+specifications. DO NOT initialize them however. We will do that later in our
+constructor.
+
+\subsubsection{Constructor and XML Parsing}
+
+For this portion of the assignment, create a constructor that takes a single
+string, \lstinline|filepath|. This file path is intended to be either an
+absolute or relative path to an XML file of the same form as vehicles.xml. The
+purpose of our constructor is to parse this file and use it's contents to
+populate our class's attributes.
+
+The general template for parsing an XML file in Java using \lstinline|javax| is as 
+follows:
+\begin{lstlisting}{\scriptsize}
+
+DocumentBuilderFactor dbf = DocumentBuilderFactory.newInstance();
+
+DocumentBuilder db = null;
+try{
+    db = dbf.newDocumentBuilder();
+} catch(ParserConfigurationException e{
+    //...
+}
+
+File f = new File(filepath);
+
+Document doc = null;
+try{
+    doc = db.parse(f);
+} catch(SAXException | IOException e){
+    //...
+}
+\end{lstlisting}
+
+Following this set of operations you will be left with \lstinline|dbf|. From there
+you should use the \lstinline|doc.getElementsByTagName(tag)| to:
+\begin{enumerate}
+    \item To get a \lstinline|NodeList| of each vehicle in the file and iterate over that list. For each item in that list:
+    \begin{enumerate}
+        \item Get the 
+    \end{enumerate}
+\end{enumerate}
+
+\subsubsection{Getters}
+
+\textbf{Your Task:} 
+The only getter you will need for this class is for the \lstinline|makes|
+attribute. We will be building other query function that will allow the user to
+interact with the database. Be sure to create the getter in accordance with
+the specifications detailed in Section \ref{sec:getter}.
+
+\subsubsection{Query Functions}
+
+To interact with the ``database'' we will be implementing the following functions 
+
+\paragraph{\lstinline|public ArrayList<String> queryClasses(String
+user_make)\{ ... \}|} This function should  search the database, and return a
+\textit{sorted} ArrayList of string containing all the \textit{unique} vehicle
+classes that are of the specified \lstinline|user_make|. Be sure to ignore the
+case of the string \lstinline|user_make| when making comparisons.
+
+\paragraph{\lstinline|public ArrayList<String> queryModels(String user_make,
+String user_class)\{ ... \}|} This function should search the database and return a
+\lstinline{sorted} ArrayList of strings containing all the \textit{unique}
+vehicle models present in the database that have the specified
+\lstinline|user_make| and \lstinline|user_model|. Be sure to ignore the case of
+the parameters when making comparisons.
+
+\paragraph{\lstinline|public ArrayList<Vehicle> queryVehicles(String
+user_model)\{ ... \}|} Search the database and return an ArrayList of all the
+\lstinline|Vehicle| instances in the database that match the model specified in
+the parameter \lstinline|user_model|. Be sure to ignore the case of
+\lstinline|user_model| when making comparisons.

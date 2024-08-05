@@ -1,0 +1,207 @@
+To begin with, we will make a \lstinline|Vehicle| class which will contain
+information on each of the vehicles we will eventually read in from our XML
+file. 
+
+
+\subsubsection{Attributes}
+The first thing we will need for our class are some attributes to store
+information on the vehicles that will eventually be instantiated. Reference
+Section \ref{ref:xmlstuff} and create attributes for each of the vehicle
+elements we will be storing information on. Be sure to (1) make each attribute
+is of the correct type and (2) all attributes are \lstinline|private| and
+\lstinline|final|. The purpose of \lstinline|private| is to ensure
+encapsulation and \lstinline|final| is used to ensure that, once set, the
+values associated with each attribute cannot be changed.\\
+
+\subsubsection{Constructor}
+Our constructor should have the following general form:
+\begin{lstlisting}[frame=trBL]
+public Vehicle(...){
+    // Body here
+}
+\end{lstlisting}
+\textbf{Your Task: } Complete the constructor such that it takes parameters for
+each of the vehicles attributes and sets them. Refer to the attributes in section
+2.2 for which attributes should be included in the constructor and what their
+type should be.\\
+
+\subsubsection{Getters}\label{sec:getter}
+
+Since our attributes were declared with the \lstinline|private| keyword they
+will not be accessible outside of the class. This keyword allows us to control
+access to attributes by defining ``getter'' functions to allow instances of our
+class, as they're used in other classes, access to private variables.
+Additionally, we can allow other classes to modify the values of private
+variables using ``setter'' functions.\\
+
+For our Vehicle class we will only be needing to define getter functions since
+all of our attributes are \lstinline|final| and therefore cannot be modified
+after their initial assignment.  In general, getters function names should be
+the word ``get'' followed by the name of the attribute we want to get. For
+instance, if your class has a private attribute string attribute named
+\lstinline|studentName| the associated getter function name should be:
+\begin{lstlisting}[frame=trBL]
+public String getStudentName(){ 
+    return studentName;
+}
+\end{lstlisting}
+
+\textbf{Your Task:} Define a getter for all of the attributes of your class
+using this general form.\\
+
+
+\textit{Hint: Defining getters and setters is tedious so most modern IDEs can
+auto-generate getters and setter. Explore your IDE and see if you can figure
+out how to use this functionality.}
+
+\subsubsection{String Overrides}
+
+Finally, we want the ability to print the contents of our class in a pretty,
+readable manner. By default, if you instantiate a class and then print it 
+you will get the something along the lines of the following output:\\
+\vspace{0.2cm}\\
+
+\begin{framed}
+\begin{minipage}{0.25\textwidth}
+\underline{\textbf{Foo.java}}
+\begin{lstlisting}
+public class Foo{
+   //...
+}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\vline
+\hfill
+\begin{minipage}{0.32\textwidth}
+\underline{\textbf{Main.java}}
+\begin{lstlisting}
+public class Main{
+   Foo c1 = new Foo();
+   System.out.println(c1);
+}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\vline
+\hfill
+\begin{minipage}{0.28\textwidth}
+\underline{\textbf{Terminal:}}
+\begin{shell}
+> java Main
+Foo@6504e3b2
+\end{shell}
+\end{minipage}
+\end{framed}
+\vspace{0.2cm}
+
+By overriding the \lstinline|toString| function we can define how this class
+should be converted to a string. This in turn defines what string should be
+printed when printing an instance of the class. For instance, if the
+\lstinline|Foo| class has an attribute \lstinline|name| we can provide a 
+\lstinline|toString| method for that class and our program will now run
+in the following way:\\
+\vspace{0.2cm}\\
+
+\begin{framed}
+\begin{minipage}{0.52\textwidth}
+\textbf{Foo.java}
+\begin{lstlisting}
+public class Foo{
+    public String name = "bar";
+    //...
+    @Override 
+    public String toString(){
+        return "Foo name: " + this.name;
+    }
+}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\vline
+\hfill
+\begin{minipage}{0.42\textwidth}
+\underline{\textbf{Main.java}}
+\begin{lstlisting}
+public class Main{
+    Foo c1 = new Foo();
+    System.out.println(c1);
+}
+\end{lstlisting}
+\hline
+\vspace{0.2cm}
+\underline{\textbf{Terminal:}}
+\begin{shell}
+> java Main
+Foo name: bar
+\end{shell}
+\end{minipage}
+\end{framed}
+\vspace{0.2cm}
+
+
+\textbf{Your Task: } Override the \lstinline|toString| method such that when an instance of the \lstinline|Vehicle| class is printed it appears in the following form:
+\begin{shell}
+--Year Make Model--
+Cylinders: CylinderCount
+Drive: DriveConfig
+Fuel Type: FuelType 
+Transmission: TransmissionType
+Class: VehicleClass
+
+\end{shell}
+
+\subsubsection{Comparable Override}
+
+In your provided starter files you will notice that the constructor is declared in the following way:
+\begin{lstlisting}[frame=trBL]
+public class Vehicle implements Comparable<Vehicle>{
+    //...
+}
+\end{lstlisting}
+\lstinline|Comparable| is an interface. We will cover interfaces in greater
+detail later but, for the time being it is sufficient to know that an interface
+is a construct in Java which contains function headers which have not
+been implemented. For \lstinline|Comparable|, one of these functions is the
+\lstinline|compareTo| method which is used by functions such as
+\lstinline|Collections.sort|. In a later portion of the assignment we will be
+sorting collections of \lstinline|Vehicle| instances and, as such, we must
+implement the \lstinline|compareTo| method by returning a comparison between
+attributes in the class for which the \lstinline|compareTo| method has already
+been implemented (e.g., \lstinline|String|, \lstinline|Integer|). For example:
+\begin{lstlisting}[frame=trBL]
+public class Foo implements Comparable<Foo>{
+    String name;
+    public Foo(String name){
+        this.name = name
+    }
+    @Override
+    public int compareTo(Foo other) {
+        return name.compareTo(other.name);
+    }
+}
+\end{lstlisting}
+
+
+\textbf{Your Task:} Change the class such that it implements \lstinline|Comparable<Vehicle>| and implement the method \lstinline|compareTo| method such that it compares vehicle objects based on their year.
+
+\subsubsection{Vehicle Class - Checklist}
+\begin{itemize}
+    \item Class Attributes:
+        \begin{todolist}
+            \item All needed attributes are declared.
+            \item Attributess are \lstinline|private|.
+            \item Attributess are \lstinline|final|.
+        \end{todolist}
+    \item Getters
+        \begin{todolist}
+            \item A getter function exists for each attribute.
+            \item All getters are of the form \lstinline|getAttributeName|.
+        \end{todolist}
+    \item Overrides
+        \begin{todolist}
+            \item The \lstinline|tosString| method is present and returns a string of the specified format.
+            \item The \lstinline|compareTo| method is present and returns the comparision between the intance and a \lstinline|Vehicle| instance that is passed in as a parameter. The comparison should be based on year of the vehicles being compared.
+        \end{todolist}
+\end{itemize}
+

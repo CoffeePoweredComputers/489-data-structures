@@ -1,0 +1,34 @@
+As the name suggests one of the primary methods  of a Binary \textit{Search}
+Tree is to provide the ability to \textit{search} for an access a specific node
+in the tree. Searching will also form the basis for adding and removing nodes.
+In a BST you should keep in mind the following rules:
+\begin{enumerate}
+    \item For a given root node, the left node is less than the root and the right node is greater than the root.
+    \item The leftmost node in a tree contains the smallest value.
+    \item The rightmost node in a tree contains the greatest value.
+\end{enumerate}
+The first of these rules is the one with which we will concern ourselves with
+for performing a general search. The latter two can be used to search for the
+greatest node or the least node in a tree.\\
+
+\textbf{Your Task: } Using these rules, implement the following methods that
+search for nodes in the BST.  These methods can be implemented either
+recursively or iteratively. Whichever solution you choose to pursue, do take
+care to use the proper method signature as detailed below:
+\begin{itemize}
+    \item A search method:
+    \begin{itemize}
+        \item \textbf{Iterative:} \lstinline|public TreeNode<E> search(E data){ ... }|
+        \item \textbf{Recursive:} \lstinline|public TreeNode<E> search(TreeNode<E> curr, T data){ ... }|
+    \end{itemize}
+    \item A method that retrieves the minimum node in a tree:
+    \begin{itemize}
+        \item \textbf{Iterative:} \lstinline|public TreeNode<E> getMinimum(){ ... }|
+        \item \textbf{Recursive:} \lstinline|public TreeNode<E> getMinimum(TreeNode<E> curr){ ... }|
+    \end{itemize}
+    \item A method that retrieves the maximum node in a tree:
+    \begin{itemize}
+        \item \textbf{Iterative:} \lstinline|public TreeNode<E> getMaximum(){ ... }|
+        \item \textbf{Recursive:} \lstinline|public TreeNode<E> getMaximum(TreeNode<E> curr){ ... }|
+    \end{itemize}
+\end{itemize}

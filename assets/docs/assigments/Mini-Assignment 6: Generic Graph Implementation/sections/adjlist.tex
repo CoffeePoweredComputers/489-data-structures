@@ -1,0 +1,140 @@
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[list/.style={rectangle split, rectangle split parts=2, draw, rectangle split verical}, start chain]
+
+            \node[list,on chain] (A) {value=12 \nodepart{second} weight=1};
+
+    \end{tikzpicture}\\
+    \caption{A visual representation of an edge}
+    \label{fig:edge}
+\end{figure}
+
+Our implementation of an adjacency list will be composed of a HashMap with
+vertices as keys and edge lists as values. As you will see in
+Section~\ref{sec:edge}, an edge is composed of two attributes, a weight and the
+vertex containing a destination (Figure~\ref{fig:edge}). The following is an
+example of how a graph is represented by an adjacency matrix.\\
+
+\begin{minipage}{0.4\textwidth}
+    {\renewcommand{\arraystretch}{1.2}% for the vertical padding}
+    \begin{tabular}{| c | l |}
+        \hline
+        Key & Value \\
+        \hline
+        a & \rule[11.2ex]{0pt}{0pt}  \begin{tikzpicture}[list/.style={rectangle split, rectangle split parts=3, draw}, start chain]
+
+                \foreach \x/ \w in {D/5}{
+                    \node[list,on chain] (\x) {dest=\x \nodepart{second} weight=\w};
+                }
+
+
+                \node[on chain,draw,inner sep=6pt] (N) {};
+                \draw (N.north east) -- (N.south west);
+                \draw (N.north west) -- (N.south east);
+
+
+                \foreach \s/ \d in {D/N}{
+                    \draw[*->] let \p1 = (\s.three), \p2 = (\s.three) in (\x1,\y2) -- (\d);
+                }
+
+        \end{tikzpicture}
+        \\ \hline
+        b & \rule[11.2ex]{0pt}{0pt} \begin{tikzpicture}[list/.style={rectangle split, rectangle split parts=3, draw}, start chain]
+
+                \foreach \x/ \w in {A/7}{
+                    \node[list,on chain] (\x) {dest=\x \nodepart{second} weight=\w};
+                }
+
+
+                \node[on chain,draw,inner sep=6pt] (N) {};
+                \draw (N.north east) -- (N.south west);
+                \draw (N.north west) -- (N.south east);
+
+
+                \foreach \s/ \d in {A/N}{
+                    \draw[*->] let \p1 = (\s.three), \p2 = (\s.three) in (\x1,\y2) -- (\d);
+                }
+
+        \end{tikzpicture}
+        \\ \hline
+        c & \rule[11.2ex]{0pt}{0pt} \begin{tikzpicture}[list/.style={rectangle split, rectangle split parts=3, draw}, start chain]
+
+                \foreach \x/ \w in {B/8}{
+                    \node[list,on chain] (\x) {dest=\x \nodepart{second} weight=\w};
+                }
+
+
+                \node[on chain,draw,inner sep=6pt] (N) {};
+                \draw (N.north east) -- (N.south west);
+                \draw (N.north west) -- (N.south east);
+
+
+                \foreach \s/ \d in {B/N}{
+                    \draw[*->] let \p1 = (\s.three), \p2 = (\s.three) in (\x1,\y2) -- (\d);
+                }
+        \end{tikzpicture}
+        \\ \hline
+        d & \rule[11.2ex]{0pt}{0pt} \begin{tikzpicture}[list/.style={rectangle split, rectangle split parts=3, draw}, start chain]
+
+                \foreach \x/ \w in {B/1}{
+                    \node[list,on chain] (\x) {dest=\x \nodepart{second} weight=\w};
+                }
+
+
+                \node[on chain,draw,inner sep=6pt] (N) {};
+                \draw (N.north east) -- (N.south west);
+                \draw (N.north west) -- (N.south east);
+
+
+                \foreach \s/ \d in {B/N}{
+                    \draw[*->] let \p1 = (\s.three), \p2 = (\s.three) in (\x1,\y2) -- (\d);
+                }
+
+        \end{tikzpicture}
+        \\ \hline
+        e & \rule[11.2ex]{0pt}{0pt} \begin{tikzpicture}[list/.style={rectangle split, rectangle split parts=3, draw}, start chain]
+
+                \foreach \x/ \w in {D/15, B/7, C/5}{
+                    \node[list,on chain] (\x) {dest=\x \nodepart{second} weight=\w};
+                }
+
+
+                \node[on chain,draw,inner sep=6pt] (N) {};
+                \draw (N.north east) -- (N.south west);
+                \draw (N.north west) -- (N.south east);
+
+
+                \foreach \s/ \d in {D/B, B/C, C/N}{
+                    \draw[*->] let \p1 = (\s.three), \p2 = (\s.three) in (\x1,\y2) -- (\d);
+                }
+
+
+
+        \end{tikzpicture}
+        \\ \hline
+
+    \end{tabular}
+    }
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\textwidth}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.7, auto,swap]
+
+    \node[starting vertex] (a) at (-5,2) {a};
+    \foreach \pos/\name in {{(-2,5)/b}, {(2,2)/c},
+                            {(-3,-2)/d}, {(0,0)/e}}
+        \node[vertex] (\name) at \pos {$\name$};
+
+    \foreach \source/ \dest/ \weight in {b/a/7, c/b/8,a/d/5,
+                                         e/b/7, e/c/5,e/d/15,
+                                         d/b/1
+                                         }
+        \draw[-{>},line width=0.9pt] (\source) -- node[weight] {$\weight$} (\dest);
+\end{tikzpicture}
+\end{figure}
+\end{minipage}
+
+\\
+\vspace{0.25cm}

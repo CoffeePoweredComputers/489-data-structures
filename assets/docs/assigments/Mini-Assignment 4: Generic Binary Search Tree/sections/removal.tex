@@ -1,0 +1,85 @@
+\vspace{0.25cm}\\
+\begin{minipage}{0.32\textwidth}
+    \centering
+    \vspace{0.1cm}
+    \begin{figure}[H]
+    \begin{tikzpicture}[level distance=1.5cm,
+        level 1/.style={sibling distance=3cm},
+        level 2/.style={sibling distance=1.5cm},
+        every node/.style = {minimum width = 2em, draw, circle}
+        ]
+        \node {5}
+            child {node {3}
+                child {node {1}}
+                child {node[fill=!10!orange] {4}}
+            }
+            child {node {6}
+                child {edge from parent[draw = none]}
+                child {node {8}}
+            };
+    \end{tikzpicture}
+    \caption{Leaf}
+    \label{fig:nodeleaf}
+    \end{figure}
+\end{minipage}
+\hfill
+\begin{minipage}{0.32\textwidth}
+    \centering
+    \begin{figure}[H]
+    \begin{tikzpicture}[level distance=1.5cm,
+        level 1/.style={sibling distance=3cm},
+        level 2/.style={sibling distance=1.5cm},
+        every node/.style = {minimum width = 2em, draw, circle}
+        ]
+        \node {5}
+            child {node {3}
+                child {node {1}}
+                child {node {4}}
+            }
+            child {node[fill=!10!orange] {6}
+                child {edge from parent[draw = none]}
+                child {node {8}}
+            };
+    \end{tikzpicture}
+    \caption{One Subtree}
+    \label{fig:nodeonechild}
+    \end{figure}
+\end{minipage}
+\hfill
+\begin{minipage}{0.32\textwidth}
+    \centering
+    \begin{figure}[H]
+    \begin{tikzpicture}[level distance=1.5cm,
+        level 1/.style={sibling distance=3cm},
+        level 2/.style={sibling distance=1.5cm},
+        every node/.style = {minimum width = 2em, draw, circle}
+        ]
+        \node {5}
+            child {node[fill=!10!orange] {3}
+                child {node {1}}
+                child {node {4}}
+            }
+            child {node {6}
+                child {edge from parent[draw = none]}
+                child {node {8}}
+            };
+    \end{tikzpicture}
+    \caption{Two Subtrees}
+    \label{fig:nodetwochildren}
+    \end{figure}
+\end{minipage}
+\vspace{0.25cm}\\
+Removing a node once again begins with a search, however, once we have found
+the node we wish to remove, there are three situations we must consider:
+\begin{enumerate}
+    \item The node we are removing is a leaf (Figure~\ref{fig:nodeleaf}).
+    \item The node we are removing has one subtree(Figure~\ref{fig:nodeonechild}).
+    \item The node we are removing has two subtrees (Figure~\ref{fig:nodetwochildren}).
+\end{enumerate}
+
+\textbf{Your Task: } Your task will be to create the following method:
+\lstinline|public void remove(??){ ... }|. The parameters of this method
+ are up to you and the approach you take. A suggested strategy for dealing with
+ the various removal cases enumerated above is detailed in the following
+ sections.
+

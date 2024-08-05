@@ -1,0 +1,77 @@
+\subsubsection{Attributes}
+
+\begin{enumerate}
+    \item \lstinline|private final boolean directed| 
+    \item \lstinline|private final boolean weighted|
+    \item \lstinline|private Map<E, List<Edge<E>>> map|
+\end{enumerate}
+
+The purpose of the \lstinline|directed| and \lstinline|weighted| is to direct
+the control flow of methods relating to the addition and removal of edges. 
+The map is the data-structure we will be using to represent our adacency list.
+Each vertex \lstinline|E| will be associated with a \lstinline|List| of 
+\lstinline|Edge| instances. 
+
+\subsubsection{Constructor}
+
+\paragraph{\lstinline|public ListGraph(boolean directed, boolean weighted) \{
+... \}|}: This is the only constructor we will have for this class since
+control flow of variations on the graph will be handled via the two parameters.
+It should set the \lstinline|directed| and \lstinline|weighted| attributes
+equal to the values passed in as parameter s to the constructor. It should also
+create a new, empty instance of \lstinline|Map| that associates vertecies of
+\lstinline|E| with and edge list of \lstinline|List<Edge<E>>|.
+
+
+
+\subsubsection{Vertex Methods}
+
+\paragraph{\lstinline|public void addVertex(E vertex) { ... }|}: The add
+vertex method should create a new entry in the \lstinline|map| and associate it
+with a new instance of an empty \lstinline|List| of \lstinline|Edges|.
+
+\paragraph{\lstinline|public void removeVertex(E vertex) { ... }|}: The 
+remove vertex function should do two things: (1) remove the given vertex
+and it's associated list of edges and (2) search through all other 
+edge lists in \lstinline|map| and all those edges with the given 
+vertex as the \lstinline|dest|.
+
+%\noindent \textit{Hint:} Look into the
+%\href{https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html#removeIf-java.util.function.Predicate-}{\lstinline|removeIf|} 
+%function for the \lstinline|List| interface in the Java documentation. It can
+%be used to reduce the complexity of the second objective of the
+%\lstinline|removeVertex| function.
+
+\paragraph{\lstinline|public Set<E> getVertecies() { ... }|}: This 
+should return a list of the vertecies currently in \lstinline|map|. \\
+
+\noindent\textit{Hint:} This method should be one line of code that returns
+the keyset from the map. Refer to the \lstinline|HashMap| documentation for
+which method can accomplish this.
+
+\subsubsection{Edge Methods}
+
+The following two methods will handle the addition of edges to the graph. 
+\begin{enumerate}
+    \item \lstinline|public void addEdgeUnweighted(E source, E dest) { ... }|
+    \item \lstinline|public void addEdgeWeighted(E source, E dest, int weight) { ... }|
+\end{enumerate}
+Each of these methods should first check if both the given \lstinline|source|
+and the \lstinline|dest| should be in the \lstinline|map|. If they are, it
+should instantiate a new edge, \textit{taking care to call the appropriate
+constructor}, and add the edge to \lstinline|source|'s associate edge list in
+\lstinline|map|. If the graph is undirected, it should follow a similar process
+to create an edge from \lstinline|dest| to \lstinline|source|.
+
+
+\paragraph{\lstinline|public void removeEdge(E source, E dest) \{ ... \}|}: 
+This method should remove the edge from \lstinline|source| to \lstinline|dest|
+and, if the graph graph is undirected, from \lstinline|dest| to \lstinline|source|.
+
+\paragraph{\lstinline|public List<Edge<E>> getEdges(E vertex) \{ ... \}|}: This
+is a getter method that retrieves the edgelist associated with a given vertex.\\
+
+\noindent\textit{Hint:} This method should be one line of code that returns the
+list associated with a vertex. Refer to the \lstinline|HashMap| documentation
+for which method can accomplish this.
+

@@ -1,0 +1,91 @@
+\begin{minipage}{0.32\textwidth}
+    \centering
+    \vspace{0.1cm}
+    \begin{figure}[H]
+    \begin{tikzpicture}[level distance=1.5cm,
+        level 1/.style={sibling distance=3cm},
+        level 2/.style={sibling distance=1.5cm},
+        every node/.style = {minimum width = 2em, draw, circle}
+        ]
+        \node[fill=!10!orange] {5}
+            child {node {3}
+                child {node {1}}
+                child {node {4}}
+            }
+            child {node {7}
+                child {edge from parent[draw = none] }
+                child {node {8}}
+            };
+    \end{tikzpicture}
+    \caption{Current Node is 5 which is less than 6 so we proceed right}
+    \label{label:add1}
+    \end{figure}
+\end{minipage}
+\hfill
+\begin{minipage}{0.32\textwidth}
+    \centering
+    \begin{figure}[H]
+    \begin{tikzpicture}[level distance=1.5cm,
+        level 1/.style={sibling distance=3cm},
+        level 2/.style={sibling distance=1.5cm},
+        every node/.style = {minimum width = 2em, draw, circle}
+        ]
+        \node {5}
+            child {node {3}
+                child {node {1}}
+                child {node {4}}
+            }
+            child {node[fill=!10!orange] {7}
+                child {edge from parent[draw = none]}
+                child {node {8}}
+            };
+    \end{tikzpicture}
+    \caption{Current node is 7 which is less than 6. The left pointer is null so we can stop traversing and insert here.}
+    \label{label:add2}
+    \end{figure}
+\end{minipage}
+\hfill
+\begin{minipage}{0.32\textwidth}
+    \centering
+    \begin{figure}[H]
+    \begin{tikzpicture}[level distance=1.5cm,
+        level 1/.style={sibling distance=3cm},
+        level 2/.style={sibling distance=1.5cm},
+        every node/.style = {minimum width = 2em, draw, circle}
+        ]
+        \node {5}
+            child {node {3}
+                child {node {1}}
+                child {node {4}}
+            }
+            child {node {7}
+                child {node[fill=!10!orange] {6}}
+                child {node {8}}
+            };
+    \end{tikzpicture}
+    \caption{The final tree.}
+    \label{label:add3}
+    \end{figure}
+\end{minipage}
+\vspace{0.25cm}
+
+Adding a node is very similar to search in that you will use the BST property
+to ``search'' for the first available (e.g, \lstinline|null|) spot in the tree.
+This process, as displayed in Figure \ref{label:add1}-\ref{label:add3},
+involves the following steps: 
+\begin{enumerate}
+    \item As we are traversing if the data associated with the current node is greater than the node we are attempting to insert and the left pointer is null then insert as that node's left child; otherwise, proceed left.
+    \item As we are traversing if the data associated with the current node is less than the node we are attempting to insert and the right pointer is null then insert as that node's left child; otherwise, proceed right.
+    \item As we are traversing if the data associated with the current node is equal to the one we are attempting to insert then we can stop traversing as we do not need to insert the node.
+\end{enumerate}
+
+\textbf{Your Task:} Implement a method  that takes a generic parameter
+\lstinline|data|, instantiates a new \lstinline|TreeNode|  and inserts it into
+the tree according to BST insertion rules described above. One of the following
+method signatures should be used depending on whether you choose to implement
+this iteratively or recursively.
+\begin{itemize}
+    \item \textbf{Iterative:} \lstinline|public void add(T data){ ... }|
+    \item \textbf{Recursive:} \lstinline|public void add(TreeNode<T> curr, T data){ ... }|
+\end{itemize}
+

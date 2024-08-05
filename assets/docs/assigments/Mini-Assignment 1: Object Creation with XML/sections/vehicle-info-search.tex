@@ -1,0 +1,49 @@
+This class will only have the \lstinline|main| method and will structure the
+search functionality of the database. It should be implemented using the
+following steps:
+\begin{enumerate}
+    \item Generate a database using the provided XML file.
+    \item Present the user with the list of available makes, ask them which they want, and store that input.
+    \item Use the make they selected to query which classes of vehicle are available with that make, present the result, then ask the user which they want.
+    \item User the previous make and class results to query which models are available, present the results of that query, and ask the user which they would prefer.
+    \item User the user input from the previous step to query the list of all those models, iterate over that list, and print each vehicle object to the user.
+    \item Ask the user if they want to continue. If they type \lstinline|q| terminate the loop; otherwise, continue.
+\end{enumerate}
+Your output, once finished, should look something like this:
+
+\begin{shell}
+Generating database...
+Makes: [AM General, ASC Incorporated, Acura, Alfa Romeo, American Motors Corporation, Aston Martin, Audi, ...]
+Enter a make: Audi
+Classes: [Compact Cars, Large Cars, Midsize Cars, Midsize Station Wagons, Midsize-Large Station Wagons, ...]
+Enter a class: Midsize Cars
+Models: [100, 100 quattro, 200, 200 quattro, 200 quattro 20v, 5000 CS Turbo, 5000 CS quattro, ...]
+Enter a model: 100
+
+RESULTS:
+--1993 Audi 100--
+Cyliners: 6
+Drive: Front-Wheel Drive
+Fuel Type: Premium
+Transmission: Automatic 4-spd
+Class :Midsize Cars
+
+--1993 Audi 100--
+Cyliners: 6
+Drive: Front-Wheel Drive
+Fuel Type: Premium
+Transmission: Manual 5-spd
+Class :Midsize Cars
+
+--1994 Audi 100--
+Cyliners: 6
+Drive: Front-Wheel Drive
+Fuel Type: Premium
+Transmission: Automatic 4-spd
+Class :Compact Cars
+...
+\end{shell}
+
+Do note that the above example has replace some of the output for makes,
+classes, and models with ellipses. This is only to shorted the example. Your
+code should output each of the lists in their entirety.

@@ -1,0 +1,265 @@
+\documentclass[a4paper]{article}
+\setlength{\parindent}{0pt}
+
+%%%%%%%% CREATE DOCUMENT STRUCTURE %%%%%%%%
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{subfig}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, intersections}
+
+\tikzstyle{smallbuilding} = [rectangle, rounded corners, minimum width=4cm, minimum height=1.5cm,text centered, draw=black, fill=red!30]
+%\tikzstyle{code} = [trapezium, trapezium left angle=70, trapezium right angle=110 , minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{mediumbuilding} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{largebuilding} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+
+
+%% Useful packages
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{lstautogobble}
+\usepackage{sectsty}
+\usepackage{apacite}
+\usepackage{float}
+\usepackage{titling} 
+\usepackage{blindtext}
+\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage{xcolor}
+\definecolor{darkgreen}{rgb}{0.0, 0.4, 0.0}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\usepackage{listings}
+\lstset{language=Java,
+    showspaces=false,
+    showtabs=false,
+    breaklines=true,
+    showstringspaces=false,
+    breakatwhitespace=true,
+    commentstyle=\color{pgreen},
+    keywordstyle=\color{pblue},
+    stringstyle=\color{pred},
+    basicstyle=\ttfamily,
+    colframe=white!75!black,
+    moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+
+\usepackage[most]{tcolorbox}
+
+\newtcblisting{shell}{colback=black,colupper=white,colframe=white!75!black,
+	listing only}
+
+% ToDo: List
+\usepackage{enumitem,amssymb}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+
+%%%%%%%% DOCUMENT %%%%%%%%
+\begin{document}
+
+%%%% Title Page
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 							% horizontal line and its thickness
+\center 
+ 
+% University
+\textsc{\LARGE University of Illinois @ Urbana-Champaign}\\[1cm]
+
+% Document info
+\textsc{\Large CI 487: Data Structures for CS Teachers}\\[0.2cm]
+\textsc{\large }\\[1cm] 										% Course Code
+\HRule \\[0.8cm]
+{ \huge \bfseries Project 3: Campus Navigator}\\[0.7cm]								% Assignment
+\HRule \\[0.8cm]
+\vfill
+\input{./images/graph.tex}
+\vfill 
+
+\end{titlepage}
+
+
+\section*{Objectives and Overview}
+
+At a high level this assignment relies on two data structures in the main
+method of the \lstinline|Main| class:
+\begin{enumerate}
+    \item \lstinline|Graph<String> map|: This is an undirected, weighted graph which holds information on the locations and distances between locations.
+    \item \lstinline|Map<String, Location> locationInfo|: This is a directory which has the code for each building location as the key and the location object containing the actual name and information associated with the building as its value.
+\end{enumerate}
+
+The information used to populated each of these data structures is contained in
+the files \texttt{vertexlist.csv} and \texttt{edgelist.csv}. The methods responsible
+for reading this information and populating \lstinline|map| and \lstinline|locationInfo|
+are \lstinline|readCSV(String fp| and \lstinline|populateCampusMap|. Both these
+files and the methods are provided for you but it is \textit{highly} recommended that you
+read through these files and methods to understand their contents.\\
+
+Looking at the edge list file you will notice that shorthand codes for the
+buildings are used in place of their names. This is to reduce entry error since
+some of the names are long and can become tiresome and error prone to enter.
+This graphs primary purpose is to construct the map object, where the codes are
+the vertices and the weights of the edges are those that are stated in the
+file.\\
+
+As for the vertex list, this is primary used to construct the information
+directory \lstinline|locationInfo|.  The building codes present in the file as
+the first entry in each line will be used as the keys and the two entries
+following that, which represent the full name and info, will be used construct
+objects to contain this information for use as the values.\\
+
+Your task for this assignment, will be to implement the ability for the user to
+navigate around our little virtual campus map.
+
+
+
+\section{Structures and Specifications}
+
+This assignment is divided into two main parts.  Section~\ref{sec:location}
+details the construction of a \lstinline|Location| class which will be used to
+store information on a given location in each vertex of the graph.
+Section~\ref{sec:nav} will cover the main portion of the assignment which
+allows a user to: look around from their immediate location, move to one of the
+adjacent location, get info on the location they're currently on, and find the
+shortest path to some other location.
+
+\subsection{Step 1 - Create a Location.java File and Class}\label{sec:location} 
+
+Each entry in the graph will hold two pieces of information: the name of the
+location and the info associated with the location. As such, we will need to create a class
+that holds this information and manages access to it. Complete the following
+steps to create a \lstinline|Location| class.
+
+\begin{enumerate}
+    \item Create a file named Location.java and create a \lstinline|public class| within that file called \lstinline|Location|.
+    \item Create two String attributes that are \lstinline|private final| called \lstinline|name| and \lstinline|info|.
+    \item Create a constructor for that class that allows both of those parameters to be set.
+    \item Create getters for each of the attributes.
+    \item Create a toString method that returns a formatted string containing the name and information associated with the location.
+\end{enumerate}
+
+You will use this \lstinline|Location| class to store information relating to each location. After performing this step you should be able
+to compile and run the program. It should producefollowing output:
+\begin{shell}
+Locations: [collegeeng, cif, morrows, noyes, ece, davenport, dcl, ...]
+Choose a starting location: 
+\end{shell}
+
+The first line of the example output has been truncated however the first series of building codes
+should be the same. 
+
+\subsection{Step 2 - Implementing Navigation in Main}\label{sec:nav}
+
+ In the code that is provided, it constructs the map of our campus
+ (\lstinline|map|) and the information directory for our campus
+ (\lstinline|locationInfo|). From there, it lists all available starting
+ locations in the form of their building codes and asks the user to select one.
+ If the selection is valid it moves onto the while loop which handles all of
+ the navigation procedures. At each iteration it should ask the user to enter
+ one of the following commands: 1) help, 2) move, 3) info, 4) look, and 5)
+ navigate. Each of these command should have the following behaviors:
+
+\begin{itemize}
+    \item \textit{help:} If the user enters help, it should call the help method which will print the users current location code as well as all available commands.
+    \item \textit{move:} If the user enters move, the move method should be called to handle asking the user which of the adjacent vertices they want to move and validating that enter. \textbf{Additionally,} the variable \lstinline|currentLocationCode| should be update to equal what move returns such that the users current location is update in the event the move they selected was valid. 
+    \item \textit{info:} This command will call the info method which takes the information directory and the users current location code, looks up the Location objects associated with that code, and prints out information on where the user currently is.
+    \item \textit{look:} This command takes the map and the users location and prints the location codes of all adjacent vertices.
+    \item \textit{navigate:} Navigate will take the user's current location code, display the location codes of all vertices in the graph, ask the user which they want to traverse to, and use the implementation of Dijkstra's SP to print the list of vertices that make up the shortest path to that destination.
+\end{itemize}
+
+
+ If the user enters a code not in the above list a message indicating that is
+ the case should be printed and the loop should continue to the next iteration.
+ The details on how these methods should be implemented along with some
+ selections of example output are detailed below.
+
+
+\paragraph{\lstinline|public static void help(String locationCode)|}: This
+method should print out your current location and the list of available
+commands which should include all methods below. Feel free to print out any
+additional information you think might be helpful in navigating your map. Below
+is an example of the output that should be produced but are welcome to produce 
+and output of your own making:
+\begin{shell}
+You are currently at <currentLocation>. You can enter the following commands:
+    * look
+    * move
+    * info
+    * navigate
+\end{shell}
+
+\paragraph{\lstinline|public static info(Map<String, Location>, String
+currentLocationCode)|}: This should get the location info associated with the
+current location from the \lstinline|locationInfo| Map and display it for
+the user. For example if the user has the current location code
+\texttt{morrows} the output should be:
+\begin{shell}
+Morrow Plots:  The Morrow Plots is an experimental agricultural field 
+at the University of Illinois Urbana-Champaign. Named for Professor 
+George E. Morrow it is the oldest such field in the United States and 
+the second oldest in the world.  
+\end{shell}
+\\
+\textit{Hint:} The parameter \lstinline|currentLocationCode| is a key to a
+String-Location pair in the Map. As such, you will want to use the
+\lstinline|get| method to get that location and then print the full name of the
+location and it's info block.
+
+
+\paragraph{\lstinline|public static void look(Graph<String> map, String
+currentLocationCode)|}: This should use the graph and the current location code
+to get the list of adjacent vertices and display them for the user so they can
+see which locations are immediately around them.
+\\
+\textit{Hint: You should use the map method map.getAdjVertecies(code) to get
+the list of vertices that are adjacent to the location code you provide as
+a parameter.}
+
+\paragraph{\lstinline|public static String move(Graph<String> map, String
+currentLocation)|}: This method should print the list of available locations to
+the user and ask them which they would like to travel to. If they enter a
+location that is not adjacent you should print a message indicating that is the
+case and return the original value of \lstinline|currentLocation|. If the
+location is valid, it should return that string.
+\\ \vspace{0.2cm}\\
+\textit{Hint: You will want to get the adjacent vertices in the graph (i.e.,
+map.getAdjVertecies(curr)) and then use the .contains() method to see if the
+user input is in that list of strings..}
+
+
+\paragraph{\lstinline|public static void navigate(Graph<String> map, String
+currentLocationCode)|}: This method should initially print all available
+vertices in the graph (\textit{Hint: use map.getVertecies()} ) and ask the user to
+select one of them. If the location that the user selects is invalid, a message 
+indicating that that is the case should be outputted. However, if the users
+selection is valid, it should then compute the shortest path from the users
+current location to that which they selected and print that path (\textit{Hint:
+use map.dijkstraShortestPath()}). For example, if the user begins at Morrows
+and wants to navigate to Beckman, they you should get the following output:
+\begin{shell}
+Enter a command (or help):navigate
+Locations: [collegeeng, cif, morrows, noyes, ece, davenport, dcl, thbh, mech, foreign, nanotech, library, naturalresc, kenney, english, ugl, stock, mumford, altgeld, ag, newmark, union, beckman, henry, talbot, lincoln, materials, edu, naturalhist, csl, everitt, foellinger, englibrary]
+Select a location to navigate to: beckman
+The shortest path is: [morrows, ugl, foellinger, foreign, davenport, noyes, naturalhist, materials, mech, englibrary, dcl, newmark, csl, beckman]
+Total travel distance: 210
+\end{shell}
+
+
+
+
+\end{document}

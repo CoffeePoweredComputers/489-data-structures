@@ -1,0 +1,153 @@
+\documentclass[a4paper]{article}
+\setlength{\parindent}{0pt}
+
+%%%%%%%% CREATE DOCUMENT STRUCTURE %%%%%%%%
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{subfig}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{lstautogobble}
+\usepackage{sectsty}
+\usepackage{apacite}
+\usepackage{float}
+\usepackage{titling} 
+\usepackage{blindtext}
+\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage{xcolor}
+\definecolor{darkgreen}{rgb}{0.0, 0.4, 0.0}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\usepackage{listings}
+\lstset{language=Java,
+    showspaces=false,
+    showtabs=false,
+    breaklines=true,
+    showstringspaces=false,
+    breakatwhitespace=true,
+    commentstyle=\color{pgreen},
+    keywordstyle=\color{pblue},
+    stringstyle=\color{pred},
+    basicstyle=\ttfamily,
+    colframe=white!75!black,
+    moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%},
+}
+
+\usepackage[most]{tcolorbox}
+
+\newtcblisting{shell}{colback=black,colupper=white,colframe=white!75!black,
+	listing only,listing options={language=sh}}
+
+% ToDo: List
+\usepackage{enumitem,amssymb}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+
+%%%%%%%% DOCUMENT %%%%%%%%
+\begin{document}
+
+%%%% Title Page
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 							% horizontal line and its thickness
+\center 
+ 
+% University
+\textsc{\LARGE University of Illinois @ Urbana-Champaign}\\[1cm]
+
+% Document info
+\textsc{\Large CI 487: Data Structures for Education}\\[0.2cm]
+\textsc{\large }\\[1cm] 										% Course Code
+\HRule \\[0.8cm]
+{ \huge \bfseries Implementation \#1:\\\vspace{0.1cm}Vehicle Database}\\[0.7cm]								% Assignment
+\HRule \\[0.8cm]
+\vfill
+%\includegraphics[width=0.6\textwidth]{images/xml.jpg}\\[1cm] 	% University logo
+\vfill 
+\end{titlepage}
+
+\section{Objectives and Overview}
+
+By the end of this assignment:
+\begin{itemize}
+  \item A review of constructing classes and instantiating objects in Java
+  \item A review of overriding functions
+  \item Reading XML files in Java.
+  \item Using the parsed XML data to instantiate objects.
+\end{itemize}
+
+\section{Structures and Specifications}
+
+This assignment will consist of the following files:
+\begin{itemize}
+  \item \lstinline|vehicles.xml| \textrightarrow\ A large XML file from the US Department of Energy containing data on vehicles.
+  \item \lstinline|Vehicle.java| \textrightarrow \ The object we will use to store information on each vehicle from vehicles.xml.
+  \item \lstinline|VehicleDatabase.java| \textrightarrow\ This class will be used to (1) parse in the file, (2) instantiate \lstinline|Vehicle| objects based on the XML elements that are parsed, and (3) allow the user to use query information in order to search for vehicles.
+  \item \lstinline|VehicleInfoSearch.java| \textrightarrow\ Uses the \lstinline|VehicleDatabase| object to setup a small filter-based, search engine. 
+\end{itemize}
+
+In combination, these files will power an app that (1) reads in data from the
+XML file, (2) cleans that data and constructs a List of objects from it, and
+(3) returns filtered results based on a user query.
+
+
+\subsection{vehicles.xml}\label{ref:xmlstuff}
+
+The general format of the original file is quite verbose and contains more data
+than we need. The process of extracting these fields will be detailed in the
+next section but for now, here is the list of the ones you should be interested
+in:
+\begin{enumerate}
+  \item \lstinline|<cylinders> INTEGER </cylinders>| \textrightarrow \ A count on the number of cylinders.
+  \item \lstinline|<drive> STRING </drive>| \textrightarrow \ Indicates what type of drive the car is (e.g., rear wheel drive).
+  \item \lstinline|<fuelType> STRING </fuelType>| \textrightarrow \ The type of fuel  the engine works on (e.g., Gas, Diesel).
+  \item \lstinline|<make> STRING </make>| \textrightarrow \ The brand of vehicle.
+  \item \lstinline|<model> STRING </model>| \textrightarrow \ The model of the vehicle.
+  \item \lstinline|<year> INTEGER </year>| \textrightarrow \ The year of that make and model.
+  \item \lstinline|<trans> STRING </trans>| \textrightarrow \ Indicates the transmission type.
+  \item \lstinline|<VClass> STRING </VClass>| \textrightarrow \ The type of vehicle (e.g., truck, sedan).
+\end{enumerate}
+
+\newpage
+\subsection{Vehicle.java}
+\input{./sections/vehicle-class.tex}
+
+
+\newpage
+\subsection{VehicleDatabase.java}
+\input{./sections/vehicle-db.tex}
+
+
+\newpage
+\subsection{VehicleInfoSearch.java}
+\input{./sections/vehicle-info-search.tex}
+
+
+%\newpage
+%\section*{Rubric}
+
+%\section*{Instructor Notes}
+
+%In addition to the core technical topics being introduced in this assignment
+%there are some meta points that relate to how you teach computer science topics
+%that should be noted as well. To often in computer science courses there is an
+%over focus on the technical
+
+\end{document}

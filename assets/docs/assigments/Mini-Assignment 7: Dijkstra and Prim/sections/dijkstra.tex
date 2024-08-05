@@ -1,0 +1,116 @@
+
+\begin{minipage}{0.53\textwidth}
+\RestyleAlgo{ruled} 
+\begin{algorithm}[H]
+    \caption{Dijkstra's Shortest Path}\label{alg:dijkstra}
+    \DontPrintSemicolon
+    \SetKwFunction{FDijkstra}{Dijkstra}
+    \SetKwProg{Fn}{Function}{}{\KwRet}
+    \Fn{\FDijkstra{G, Source, Dest}}{
+
+        \For{ u $\in$ G.Vertex}{
+            u.distance  $\gets \infty$\;
+            u.parent $\gets$ null\;
+        }
+        Source.distance $\gets$ 0\;
+        PQ $\gets$ G.Vertex\;
+        PQ.Enqueue(\textit{all vertecies})\;
+        \While{PQ $\neq \emptyset$}{
+            u $\gets$ PQ.getMin()\;
+            \For{edge $\in$ G.Adj[u]}{
+                v $\gets$ edge.dest\;
+                PathWeight $\gets$ u.distance + edge.weight)\;
+                \If{v $\in$ PQ AND PathWeight < v.distance}{
+                    v.parent $\gets$ u\;
+                    v.distance $\gets$ PathWeight\;
+                    PQ.reprioitize(v)
+                }
+            }
+        }
+    }
+\end{algorithm}
+\end{minipage}
+\hfill
+% NOTE: Credit for this goes to -> https://texample.net/tikz/examples/prims-algorithm/
+\begin{minipage}{0.5\textwidth}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1.5, auto,swap]
+    % Draw a 7,11 network
+    % First we draw the vertices
+    \foreach \pos/\name in {{(0,1)/a}, {(2,1)/b}, {(4,1)/c},
+                            {(0,0)/d}, {(3,0)/e}, {(2,-1)/f}, {(4,-1)/g}}
+        \node[vertex] (\name) at \pos {$\name$};
+    % Connect vertices with edges and draw weights
+    \foreach \source/ \dest /\weight in {b/a/7, c/b/8,d/a/5,d/b/9,
+                                         e/b/7, e/c/5,e/d/15,
+                                         f/d/6,f/e/8,
+                                         g/e/9,g/f/11}
+        \path[edge] (\source) -- node[weight] {$\weight$} (\dest);
+    % Start animating the vertex and edge selection. 
+    \foreach \vertex / \fr in {d/1,a/2,f/3,b/4,e/5,c/6,g/7}
+        \path<\fr-> node[selected vertex] at (\vertex) {$\vertex$};
+    % For convenience we use a background layer to highlight edges
+    % This way we don't have to worry about the highlighting covering
+    % weight labels. 
+    \begin{pgfonlayer}{background}
+        \pause
+        \foreach \source / \dest / \fr in {d/b/4,d/e/5,e/f/5,b/c/6,f/g/7}
+            \path<\fr->[ignored edge] (\source.center) -- (\dest.center);
+        \foreach \source / \dest in {b/d, c/b, d/a, f/e, f/d,g/f}
+            \path<+->[selected edge] (\source.center) -- (\dest.center);
+    \end{pgfonlayer}
+\end{tikzpicture}
+\caption{Dijkstra's Shortest Path (Source = D)}
+\end{figure}
+\end{minipage}
+~\\
+Though there are several variations to Dijkstra's shortest path algorithm the
+one we will be focusing on will be for weighted, undirected graphs. This is in
+preparation for the final project which deals with the creation and traversal
+of a graph of this type. Additionally, we will be focusing on the
+implementation on finding the shortest path from a given source node to a given
+destination.  The first step in doing this will be to implement
+Algorithm~\ref{alg:dijkstra} wich will find the shortest path from a given
+source node to \textit{every} vertex in the graph. 
+~\\
+
+\RestyleAlgo{ruled} 
+\begin{algorithm}[H]
+    \caption{Backtrack Traversal from Dijkstra's}\label{algo:dijkstrabacktrack}
+    \DontPrintSemicolon
+    \SetKwFunction{FPrintDijkstra}{PrintDijkstraSP}
+    \SetKwProg{Fn}{Function}{}{\KwRet}
+    \Fn{\FPrintDijkstra{G, Source, Dest}}{
+
+        Q $\gets \emptyset$\;
+        curr $\gets$ Dest\;
+        \While{Source $\notin$ Q}{
+            Q.add(curr)\;
+            curr = curr.parent\;
+        }
+
+
+    }
+\end{algorithm}
+
+~\\
+Upon the completion of running the algorithm you should have two data
+structures, one storing all of the nodes and their parents and another storing
+the total distance from the source node to each vertex in the graph.  We can
+use another algorithm to begin at the destination and backtrack to the source.
+Along the way we can collect nodes and recreast the shortest path traversal.
+The algorithm for doing so is given by Algorithm~\ref{algo:dijkstrabacktrack}.
+Here, you will begin at the destination and work your way backwards through
+your traversal (i.e., the parents of each vertex) until you find the source.
+Once this is done, output that traversal in addition to the total distance.
+The methdod you will implement for doing this is called \lstinline|printSP|
+and takes: 1) the source vertex, 2) the destination vertex, 3) the map of
+parent-child pairs, and 3) the map of distance-value pairs.
+
+\subsubsection*{Example Output}
+
+\begin{shell}
+Dijkstras Edges (Source=D, Dest=G):
+[D, F, G]: 17
+\end{shell}

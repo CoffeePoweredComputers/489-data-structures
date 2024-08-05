@@ -1,0 +1,188 @@
+\documentclass[a4paper]{article}
+\setlength{\parindent}{0pt}
+
+%%%%%%%% CREATE DOCUMENT STRUCTURE %%%%%%%%
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{subfig}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{framed}
+\usepackage{algorithm2e}
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{lstautogobble}
+\usepackage{sectsty}
+\usepackage{apacite}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{titling} 
+\usepackage{blindtext}
+\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage{xcolor}
+\definecolor{darkgreen}{rgb}{0.0, 0.4, 0.0}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\usepackage{listings}
+\lstset{language=Java,
+    showspaces=false,
+    showtabs=false,
+    breaklines=true,
+    showstringspaces=false,
+    breakatwhitespace=true,
+    commentstyle=\color{pgreen},
+    keywordstyle=\color{pblue},
+    stringstyle=\color{pred},
+    basicstyle=\ttfamily,
+    colframe=white!75!black,
+    moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+
+\usepackage[most]{tcolorbox}
+
+\newtcblisting{shell}{colback=black,colupper=white,colframe=white!75!black,
+	listing only,listing options={language=sh}}
+
+% ToDo: List
+\usepackage{enumitem,amssymb}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes.multipart,chains,arrows}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{arrows,shapes,trees}
+\usetikzlibrary{calc,shapes.multipart,chains,arrows}
+\usetikzlibrary{arrows,shapes}
+\usetikzlibrary{arrows.meta, matrix, positioning}
+\tikzset{
+    queue element/.style={
+        draw,very thin,rounded corners,
+        fill=yellow!30,
+        minimum width=1cm,minimum height=.5cm,
+        font=\sffamily\footnotesize
+    },
+    >={[scale=0.8]Triangle},
+    queue/.style={matrix of nodes,
+        nodes in empty cells,
+        nodes={queue element, anchor=center},
+        fill=green!20,
+        column sep=5mm,
+        row sep=2mm,
+    },
+}
+\tikzstyle{vertex}=[circle,fill=black!25,minimum size=20pt,inner sep=0pt]
+\tikzstyle{selected vertex} = [vertex, fill=orange!24]
+\tikzstyle{edge} = [draw,thick,-]
+\tikzstyle{weight} = [font=\small]
+\tikzstyle{selected edge} = [draw,line width=5pt,-,blue!50]
+\tikzstyle{ignored edge} = [draw,line width=5pt,-,black!20]
+\pgfdeclarelayer{background}
+\pgfsetlayers{background,main}
+
+
+%%%%%%%% DOCUMENT %%%%%%%%
+\begin{document}
+
+%%%% Title Page
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 							% horizontal line and its thickness
+\center 
+% University
+\textsc{\LARGE University of Illinois @ Urbana-Champaign}\\[1cm]
+
+% Document info
+\textsc{\Large CI 487: Data Structures for CS Teachers}\\[0.2cm]
+\textsc{\large }\\[1cm] 										% Course Code
+\HRule \\[0.8cm]
+{ \huge \bfseries Implementation \#7:\\\vspace{0.1cm}Dijkstra's Shortest Path Algorithm and Prim's Minimum Spanning Tree}\\[0.7cm]								% Assignment
+\HRule \\[0.8cm]
+\vfill
+\begin{tikzpicture}[scale=3, auto,swap]
+    % Draw a 7,11 network
+    % First we draw the vertices
+    \foreach \pos/\name in {{(0,1)/a}, {(2,1)/b}, {(4,1)/c},
+                            {(0,0)/d}, {(3,0)/e}, {(2,-1)/f}, {(4,-1)/g}}
+        \node[vertex] (\name) at \pos {$\name$};
+    \foreach \source/ \dest /\weight in {b/a/7, c/b/8,d/a/5,d/b/9,
+                                         e/b/7, e/c/5,e/d/15,
+                                         f/d/6,f/e/8,
+                                         g/e/9,g/f/11}
+        \path[edge] (\source) -- node[weight] {$\weight$} (\dest);
+    \begin{pgfonlayer}{background}
+        \foreach \source / \dest in {d/a,d/f,a/b,b/e,e/c,e/g}
+            \path<+->[ignored edge] (\source.center) -- (\dest.center);
+        \foreach \source / \dest / \fr in {d/b/4,d/e/5,e/f/5,b/c/6,f/g/7}
+            \path<\fr->[ignored edge] (\source.center) -- (\dest.center);
+    \end{pgfonlayer}
+\end{tikzpicture}
+\vfill
+\caption{Prim's Minimum Spannning Tree}
+
+%\includegraphics[width=0.2\textwidth]{images/uiuclogo.png}\\[1cm] 	% University logo
+\vfill 
+\end{titlepage}
+
+%%%% SECTIONS
+%% Section 1
+\section{Step 0: The Code You are Given}
+
+To begin, you are given an adjacency list implementation of an undirected,
+weighted graph which had the following methods:
+\begin{enumerate}
+    \item \lstinline|addVertex(E vertex) { ... }|
+    \item \lstinline|addEdgeWeighted(E source, E dest, int weight) { ... }|
+\end{enumerate}
+You can use these methods to create graphs to test your implementations of
+Prim's MST and Dijkstra's SP. 
+
+Much like the BST and DFS implementations we will be using extra data 
+structures to keep track of attributes related to the state of a given
+vertex. For both Dijkstra's and Prim's you are given the same starter code
+since both algorithms are tracking the same attributes (i.e., visited, parent,
+distance).
+
+\begin{lstlisting}
+Map<T, T> parents = new HashMap<T, T>();
+Map<T, Integer> dists = new HashMap<>();
+Queue<T> pq = new PriorityQueue<T>(Comparator.comparing(dists::get));
+\end{lstlisting}
+
+These have the following purposes:
+\begin{itemize}
+    \item \lstinline|parents|: This keeps track of our vertex's parent by having vertices of type \lstinline|E| as both keys and values.
+    \item \lstinline|dists|: This keeps track of the distance attribute related to a given node by having vertices of type \lstinline|E| as keys and \lstinline|Integers| as values.
+    \item \lstinline|pq|: This is our min priority queue (lowest value in front) and how we keep track of and access vertices that we still have left to visit. Additionally, we are overriding it's comparison behavior by saying it should get each vertex's value from \lstinline|dists| in order to determine it's position within the priority queue. 
+\end{itemize}
+
+Additionally, you are given an implementation of \lstinline|reprioritize| which
+removes and readds and entry to a priority queue in order to force said vertex
+to be reordered within a priority queue.  This method will appear in the
+psudeocode for each of the algorithms and should be called after updating the 
+distance attribute associated with a given vertex to ensure it is repositioned 
+properly.
+
+\newpage
+\subsection{Prim's Minimum-Spanning Tree}
+\input{sections/prims.tex}
+
+\newpage
+\subsection{Dijkstras Shortest Path Algorithm}
+\input{sections/dijkstra.tex}
+
+\end{document}

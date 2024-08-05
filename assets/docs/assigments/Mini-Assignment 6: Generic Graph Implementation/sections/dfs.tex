@@ -1,0 +1,88 @@
+\begin{minipage}{0.49\textwidth}
+\RestyleAlgo{ruled} 
+\begin{algorithm}[H]
+    \caption{Depth First Search}\label{alg:dfs}
+    \DontPrintSemicolon
+    \SetKwFunction{FDFS}{DFS}
+    \SetKwProg{Fn}{Function}{}{\KwRet}
+    \Fn{\FDFS{G, Source}}{
+        \For{ u $\in$ G.Vertex}{
+            u.visited $\gets$ false\;
+        }
+        S $\gets \emptyset$\; 
+        S.push(Source)\;
+        \While{S $\neq \emptyset$}{
+            u $\gets$ S.pop()\;
+            \If{u is visited}{
+                continue\;
+            }
+            u.visited $\gets$ true\;
+            \For{edge $\in$ G.Adj[u]}{
+                \If{edge.dest is not visited}{
+                    S.add(edge.dest)\;
+                }
+            }
+        }
+    }
+\end{algorithm}
+\textit{Note: the traversals shown on the right will vary depending on the order in which vertecies are pushed to the stack.}
+\end{minipage}
+\hfill
+% NOTE: Credit for this goes to -> https://texample.net/tikz/examples/prims-algorithm/
+\begin{minipage}{0.46\textwidth}
+\textbf{Results for Directed Graph:}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1.5]
+
+    \node[starting vertex] (a) at (0, 1) {a};
+    \foreach \pos/\name in {{(2,1)/b}, {(4,1)/c},
+                            {(0,0)/d}, {(3,0)/e}, {(2,-1)/f}, {(4,-1)/g}}
+        \node[vertex] (\name) at \pos {$\name$};
+
+    \foreach \source/ \dest in {a/b/7, c/b/8,a/d/5,d/b/9,
+                                         e/b/7, e/c/5,e/d/15,
+                                         f/d/6,f/e/8,
+                                         g/e/9,g/f/11}
+        \draw[-{>[scale=4.5]},line width=0.9pt] (\source) to (\dest);
+\end{tikzpicture}
+\end{figure}
+\footnotesize{\textbf{Traversal:}} a b d\\
+\hline
+\vspace{0.2cm}
+\textbf{Results for Undirected Graph:}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1.5, auto,swap]
+
+    \node[starting vertex] (a) at (0, 1) {a};
+    \foreach \pos/\name in {{(2,1)/b}, {(4,1)/c},
+                            {(0,0)/d}, {(3,0)/e}, {(2,-1)/f}, {(4,-1)/g}}
+        \node[vertex] (\name) at \pos {$\name$};
+
+    \foreach \source/ \dest in {a/b/7, c/b/8,d/a/5,d/b/9,
+                                         e/b,e/c,e/d,
+                                         f/d,f/e,
+                                         g/e,g/f}
+        \draw[->, edge] (\source) -- (\dest);
+
+\end{tikzpicture}
+\end{figure}
+\footnotesize{\textbf{Traversal:}} a d f g e b c
+\end{minipage}\\
+
+\vspace{0.25cm}\\
+
+\noindent Algorithm~\ref{alg:dfs} presents the iterative approach you will take
+for implementing DFS from a given source node. This is very similar to BFS however there are a few new variables in the psudeocode
+\begin{itemize}
+    \item \lstinline|G| is the graph on which the alorithm will operate.
+    \item \lstinline|Source| is our starting vertex
+    \item \lstinline|S| is a \textit{stack} that contains the node still under consideration for traversal.
+\end{itemize}
+
+Again, your implementation should follow it in spirit but \textit{will not be a
+direct translation of the psudeocode to Java}. As with the BFS, your vertecies
+will not have a \lstinline|visited| attribute. You will instead need to use
+some other inbuilt data structure (e.g., \lstinline|Map|) to keep track of
+whether or note a node has been visited.
