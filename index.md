@@ -11,10 +11,11 @@ seo:
 
 ### JupyterHub Worksheets
 
+I developed a set of interactive Java jupyter notebooks ([Data Structures
+Worksheets](https://github.com/CoffeePoweredComputers/487-data-structures-worksheets))
+for inclass activities.
+
 [![Data Structures Worksheets](https://github-readme-stats.vercel.app/api/pin/?username=CoffeePoweredComputers&repo=487-data-structures-worksheets)](https://github.com/CoffeePoweredComputers/487-data-structures-worksheets)
-
-Explore the [Data Structures Worksheets](https://github.com/CoffeePoweredComputers/487-data-structures-worksheets) repository for a collection of worksheets related to data structures, created by CoffeePoweredComputers.
-
 
 ### Assignments, Starter and Solution Files
 
