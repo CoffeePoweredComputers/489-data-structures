@@ -11,6 +11,3 @@ seo:
 {: .mb-2 }
 {{ site.description }}
 {: .fs-6 .fw-300 }
-
-{% endif %}
-
