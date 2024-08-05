@@ -22,3 +22,20 @@ for inclass activities.
 
 ### Slides
 
+| Folder Name | PDF Link | Folder Link |
+|-------------|-----------|-------------|
+| Lecture 1  - | [PDF1](PDF1 link) | [Folder1](Folder1 link) |
+| Lecture 2  - | [PDF2](PDF2 link) | [Folder2](Folder2 link) |
+| Lecture 3  - | [PDF2](PDF2 link) | [Folder2](Folder2 link) |
+| Lecture 4  - | [PDF2](PDF2 link) | [Folder2](Folder2 link) |
+| Lecture 5  - | [PDF2](PDF2 link) | [Folder2](Folder2 link) |
+| Lecture 6  - | [PDF2](PDF2 link) | [Folder2](Folder2 link) |
+| Lecture 7  - | [PDF2](PDF2 link) | [Folder2](Folder2 link) |
+| Lecture 8  - | [PDF2](PDF2 link) | [Folder2](Folder2 link) |
+| Lecture 9  - | [PDF2](PDF2 link) | [Folder2](Folder2 link) |
+| Lecture 10 - | [PDF2](PDF2 link) | [Folder2](Folder2 link) |
+| Lecture 11 - | [PDF2](PDF2 link) | [Folder2](Folder2 link) |
+| Lecture 12 - | [PDF2](PDF2 link) | [Folder2](Folder2 link) |
+| Lecture 13 - | [PDF2](PDF2 link) | [Folder2](Folder2 link) |
+| ... | ... | ... |
+
