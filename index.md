@@ -11,3 +11,6 @@ seo:
 {: .mb-2 }
 {{ site.description }}
 {: .fs-6 .fw-300 }
+
+![487 Setup]({{ site.baseurl }}/assets/images/487.jpg)
+
