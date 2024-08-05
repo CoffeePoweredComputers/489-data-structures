@@ -11,7 +11,7 @@ seo:
 
 ### JupyterHub Worksheets
 
-<iframe src="https://github.com/CoffeePoweredComputers/487-data-structures-worksheets" width="100%" height="600"></iframe>
+{% gist CoffeePoweredComputers/487-data-structures-worksheets %}
 
 
 ### Assignments, Starter and Solution Files
