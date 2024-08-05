@@ -6,11 +6,16 @@ seo:
   type: Course
   name: Just the Class
 ---
-
-# {{ site.tagline }}
-{: .mb-2 }
-{{ site.description }}
-{: .fs-6 .fw-300 }
-
 ![487 Setup]({{ site.baseurl }}/assets/images/487.jpg)
+
+
+### JupyterHub Worksheets
+
+<iframe src="https://github.com/CoffeePoweredComputers/487-data-structures-worksheets" width="100%" height="600"></iframe>
+
+
+### Assignments, Starter and Solution Files
+
+
+### Slides
 
