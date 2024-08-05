@@ -18,6 +18,20 @@ for inclass activities.
 
 ### Assignments, Starter and Solution Files
 
+| Assignments                                           | Starter Files               | Solution Files               |
+|-------------------------------------------------------|-----------------------------|------------------------------|
+| [Mini-Assignment 1: Object Creation with XML](https://github.com/CoffeePoweredComputers/487-data-structures/tree/master/assets/docs/assigments/Mini-Assignment%201%3A%20Object%20Creation%20with%20XML)      | [Starter File 1](#)         | [Solution File 1](#)         |
+| [Mini-Assignment 2: Generics and Interfaces](https://github.com/CoffeePoweredComputers/487-data-structures/tree/master/assets/docs/assigments/Mini-Assignment%202%3A%20Generics%20and%20Interfaces)       | [Starter File 2](#)         | [Solution File 2](#)         |
+| [Mini-Assignment 3: Generic Linked Lists](https://github.com/CoffeePoweredComputers/487-data-structures/tree/master/assets/docs/assigments/Mini-Assignment%203%3A%20Generic%20Linked%20Lists)          | [Starter File 3](#)         | [Solution File 3](#)         |
+| [Mini-Assignment 4: Generic Binary Search Tree](https://github.com/CoffeePoweredComputers/487-data-structures/tree/master/assets/docs/assigments/Mini-Assignment%204%3A%20Generic%20Binary%20Search%20Tree)    | [Starter File 4](#)         | [Solution File 4](#)         |
+| [Mini-Assignment 5: AVL Tree](https://github.com/CoffeePoweredComputers/487-data-structures/tree/master/assets/docs/assigments/Mini-Assignment%205%3A%20AVL%20Tree)                      | [Starter File 5](#)         | [Solution File 5](#)         |
+| [Mini-Assignment 6: Generic Graph Implementation](https://github.com/CoffeePoweredComputers/487-data-structures/tree/master/assets/docs/assigments/Mini-Assignment%206%3A%20Generic%20Graph%20Implementation)  | [Starter File 6](#)         | [Solution File 6](#)         |
+| [Mini-Assignment 7: Dijkstra and Prim](https://github.com/CoffeePoweredComputers/487-data-structures/tree/master/assets/docs/assigments/Mini-Assignment%207%3A%20Dijkstra%20and%20Prim)             | [Starter File 7](#)         | [Solution File 7](#)         |
+| [Project 1: Card Game](https://github.com/CoffeePoweredComputers/487-data-structures/tree/master/assets/docs/assigments/Project%201%3A%20Card%20Game)                             | [Starter File 8](#)         | [Solution File 8](#)         |
+| [Project 2: Trees](https://github.com/CoffeePoweredComputers/487-data-structures/tree/master/assets/docs/assigments/Project%202%3A%20Trees)                                 | [Starter File 9](#)         | [Solution File 9](#)         |
+| [Project 3: Campus Nav](https://github.com/CoffeePoweredComputers/487-data-structures/tree/master/assets/docs/assigments/Project%203%3A%20Campus%20Nav)                            | [Starter File 10](#)        | [Solution File 10](#)        |
+
+
 ### Slides
 
 | Folder Name | PDF Link | Folder Link |
